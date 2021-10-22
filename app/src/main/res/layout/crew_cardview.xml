@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rating_bare_drug_pharmacy"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="20dp"
+    android:layout_gravity="center_vertical"
+    android:background="@drawable/web_custom"
+    android:padding="10dp"
+    app:backgroundTint="@null"
+    android:layout_margin="10dp">
+
+        <TextView
+            android:id="@+id/txt_member_name"
+            android:layout_width="203dp"
+            android:layout_height="29dp"
+            android:layout_marginStart="48dp"
+            android:layout_marginTop="4dp"
+            android:background="@drawable/round"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:maxLines="2"
+            android:src="@drawable/n"
+            android:text="Norhan Mahmoud"
+            android:textColor="#617C79"
+            android:textSize="14dp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+        </TextView>
+
+        <TextView
+            android:id="@+id/txt_position"
+            android:layout_width="199dp"
+            android:layout_height="28dp"
+            android:layout_marginTop="80dp"
+            android:layout_marginEnd="16dp"
+            android:background="@drawable/round"
+            android:gravity="center"
+
+            android:text="Voice Head"
+            android:textColor="#617C79"
+            android:textSize="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+        </TextView>
+
+        <TextView
+            android:id="@+id/txt_community"
+            android:layout_width="186dp"
+            android:layout_height="29dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="72dp"
+            android:background="@drawable/round"
+            android:gravity="center"
+            android:text="Android"
+            android:textColor="#617C79"
+            android:textSize="14dp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/txt_position"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txt_member_name"
+            app:layout_constraintVertical_bias="0.0">
+
+        </TextView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

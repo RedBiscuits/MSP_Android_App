@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.about_us.AboutUs">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:background="#E7EDF6"
+            tools:context=".MainActivity">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="cursive"
+                android:gravity="center_vertical"
+                android:paddingLeft="20dp"
+                android:paddingTop="6dp"
+                android:text="About"
+                android:textColor="#617C79"
+                android:textSize="40sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.01" />
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:scrollbars="none">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <ImageView
+                        android:layout_marginLeft="10dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/facebook"
+                        />
+                    <ImageView
+                        android:layout_marginLeft="20dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/youtube"
+                        />
+                    <ImageView
+                        android:layout_marginLeft="20dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/instgram"
+                        />
+                    <ImageView
+                        android:layout_marginLeft="20dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/linkedin"
+                        />
+
+                </LinearLayout>
+            </HorizontalScrollView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="wrap_content"
+                android:layout_height="160dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_margin="8dp"
+                android:backgroundTint="#88B5B0"
+                android:orientation="vertical"
+                app:cardCornerRadius="20dp">
+                <TextView
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:textStyle="bold"
+                    android:textSize="20dp"
+                    android:textColor="@color/white"
+                    android:text="MSP Tech Club - ASU" android:paddingLeft="5dp" android:paddingTop="5dp"/>
+                <TextView
+                    android:layout_marginTop="35dp"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:textColor="@color/white"
+                    android:text="Microsoft Student Tech Club at ASU is a student community program that promotes advanced technology through education, practice, and innovation. It also provides students with both technical and non-technical sessions needed which is packing their lives with high level of skills and supporting their careers with opportunities ." android:paddingLeft="5dp"/>
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:layout_width="wrap_content"
+                android:layout_height="130dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_margin="8dp"
+                android:backgroundTint="#88B5B0"
+                android:orientation="vertical"
+                app:cardCornerRadius="20dp">
+                <TextView
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:textStyle="bold"
+                    android:textSize="20dp"
+                    android:textColor="@color/white"
+                    android:text="OUR MISSION"
+                    android:paddingLeft="5dp"/>
+
+                <TextView
+                    android:layout_marginTop="35dp"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:textColor="@color/white"
+                    android:text="We have a clear mission is to help the student in the campus and to be there for any kind of support needed whether it’s technical or non-technical and to help them to find suitable career ." android:paddingLeft="5dp"/>
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:layout_width="wrap_content"
+                android:layout_height="100dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_margin="8dp"
+                android:backgroundTint="#88B5B0"
+                android:orientation="vertical"
+                app:cardCornerRadius="20dp">
+                <TextView
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:textStyle="bold"
+                    android:textSize="20dp"
+                    android:textColor="@color/white"
+                    android:text="PRODUCTS"
+                    android:paddingLeft="5dp"/>
+
+                <TextView
+                    android:layout_marginTop="35dp"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:textColor="@color/white"
+                    android:text="Technical Session, Soft Skills, Cources, Workshops and Competition" android:paddingLeft="5dp"/>
+            </androidx.cardview.widget.CardView>
+            <TextView
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="10dp"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:textStyle="bold"
+                android:textSize="20dp"
+                android:textColor="#617C79"
+                android:text="OUR COMMUNITY"
+                android:paddingLeft="5dp"
+                />
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scrollbars="none">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="200dp"
+                        android:layout_height="180dp"
+                        app:cardCornerRadius="20dp"
+                        android:background="#F7F7F7"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginRight="30dp"
+                        android:layout_marginBottom="10dp"
+                        >
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:text="Android"
+                            android:textColor="#88B5B0"
+                            android:textSize="18dp"
+                            android:textStyle="bold"/>
+                        <ImageButton
+                            android:background="@drawable/imageradious"
+                            android:layout_height="150dp"
+                            android:src="@drawable/android"
+                            android:layout_width="200dp"
+                            android:layout_marginTop="20dp"
+                            android:layout_marginRight="35dp"
+                            />
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="200dp"
+                        android:layout_height="180dp"
+                        app:cardCornerRadius="20dp"
+                        android:background="#F7F7F7"
+                        android:layout_marginRight="30dp"
+                        android:layout_marginBottom="10dp"
+                        >
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:text="Data science"
+                            android:textColor="#88B5B0"
+                            android:textSize="18dp"
+                            android:textStyle="bold"/>
+                        <ImageButton
+                            android:layout_height="150dp"
+                            android:layout_width="match_parent"
+                            android:layout_marginTop="25dp"
+                            android:background="@drawable/imageradious"
+                            android:src="@drawable/datascience"
+                            android:layout_marginRight="35dp"
+                            android:layout_marginLeft="20dp"
+                            />
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="200dp"
+                        android:layout_height="180dp"
+                        app:cardCornerRadius="20dp"
+                        android:layout_marginRight="30dp"
+                        android:layout_marginBottom="10dp"
+                        >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:text="CYBER Security"
+                            android:textColor="#88B5B0"
+                            android:textSize="18dp"
+                            android:textStyle="bold">
+
+                        </TextView>
+                        <ImageButton
+                            android:layout_height="150dp"
+                            android:layout_marginTop="25dp"
+                            android:layout_width="match_parent"
+                            android:background="@drawable/imageradious"
+                            android:src="@drawable/cyper"
+                            android:layout_marginLeft="20dp"
+                            />
+                    </androidx.cardview.widget.CardView>
+
+
+
+
+                </LinearLayout>
+            </HorizontalScrollView>
+        </LinearLayout>
+    </ScrollView>
+

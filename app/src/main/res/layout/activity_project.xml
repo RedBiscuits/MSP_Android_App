@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#E7EDF6"
+    tools:context=".ui.project.ProjectActivity">
+    <TextView
+        android:id="@+id/Projects_id"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="cursive"
+        android:gravity="center_vertical"
+        android:paddingLeft="20dp"
+        android:paddingTop="20dp"
+        android:text="Projects"
+        android:textColor="#617C79"
+        android:textSize="40sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.01" />
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:scrollbars="none">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                app:backgroundTint="@null"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:background="@drawable/web_custom"
+                android:text="MOBILE"
+                android:textColor="@color/black" />
+
+            <Button
+                app:backgroundTint="@null"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:text="WEB"
+                android:background="@drawable/web_custom"
+                android:textColor="@color/black"
+                android:layout_marginLeft="30dp"/>
+
+            <Button
+                app:backgroundTint="@null"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:text="MEDIA"
+                android:background="@drawable/web_custom"
+                android:textColor="@color/cardview_dark_background"
+                android:layout_marginLeft="30dp"/>
+
+            <Button
+                app:backgroundTint="@null"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:text="IT"
+                android:background="@drawable/web_custom"
+                android:textColor="@color/cardview_dark_background"
+                android:layout_marginLeft="30dp"/>
+        </LinearLayout>
+    </HorizontalScrollView>
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recproject"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="20dp"
+
+        />
+
+
+</LinearLayout>
