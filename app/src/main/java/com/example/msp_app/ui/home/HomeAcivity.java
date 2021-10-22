@@ -20,6 +20,7 @@ public class HomeAcivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
+        getSupportActionBar().hide();
 
         crewBtn=findViewById(R.id.btn_crew);
         crewBtn.setOnClickListener(new View.OnClickListener() {

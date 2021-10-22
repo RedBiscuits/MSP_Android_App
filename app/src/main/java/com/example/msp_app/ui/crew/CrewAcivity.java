@@ -28,9 +28,11 @@ public class CrewAcivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_crew);
+        getSupportActionBar().hide();
 
         dataViewModel = ViewModelProviders.of(this).get(DataViewModel.class);
         dataViewModel.getCrew();
+
         crewAdapter=new CrewAdapter(getApplicationContext());
         dataViewModel.crewMutableLiveData.observe(this, new Observer<ArrayList<CrewModel>>() {
             @Override

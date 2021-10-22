@@ -20,37 +20,14 @@ import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
 
-
-    DataViewModel dataViewModel;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_main);
-
         getSupportActionBar().hide();
 
-        dataViewModel = ViewModelProviders.of(this).get(DataViewModel.class);
 
-        dataViewModel.getEvents();
-
-
-
-
-
-        dataViewModel.projectMutableLiveData.observe(this, new Observer<ArrayList<ProjectsModel>>() {
-            @Override
-            public void onChanged(ArrayList<ProjectsModel> projectsModels) {
-            }
-        });
-
-        dataViewModel.eventMutableLiveData.observe(this, new Observer<ArrayList<EventsModel>>() {
-            @Override
-            public void onChanged(ArrayList<EventsModel> eventsModels) {
-
-            }
-        });
 
 
         Thread splash = new Thread() {
