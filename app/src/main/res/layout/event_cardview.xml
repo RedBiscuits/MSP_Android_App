@@ -3,8 +3,10 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/back"
     android:layout_marginTop="10dp"
-    android:layout_height="wrap_content">
+    >
 
     <ImageView
         android:id="@+id/img_event"
@@ -12,20 +14,14 @@
         android:layout_height="100dp"
         android:translationZ="120dp"
         android:layout_gravity="center_horizontal"
-        android:background="@drawable/recyshape2"
-        android:src="@drawable/mspgray" />
+        android:src="@drawable/recyshape2" />
 
     <androidx.cardview.widget.CardView
-
         android:layout_width="320dp"
         android:layout_height="170dp"
-        app:backgroundTint="@null"
-        android:background="@drawable/web_custom"
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="30dp"
-        android:orientation="vertical"
-        app:cardCornerRadius="30dp"
-        >
+        app:cardCornerRadius="30dp">
         <TextView
             android:paddingTop="50dp"
             android:id="@+id/event_name_txt"

@@ -12,6 +12,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MSP_APP">
         <activity
+            android:name=".ui.event.EventDescription"
+            android:exported="true" />
+        <activity
             android:name=".ui.about_us.AboutUs"
             android:exported="true" />
         <activity

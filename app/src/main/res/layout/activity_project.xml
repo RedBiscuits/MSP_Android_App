@@ -36,11 +36,12 @@
             android:orientation="horizontal">
 
             <Button
-                app:backgroundTint="@null"
+
                 android:layout_width="150dp"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="5dp"
                 android:background="@drawable/web_custom"
+                app:backgroundTint="@null"
                 android:text="MOBILE"
                 android:textColor="@color/black" />
 

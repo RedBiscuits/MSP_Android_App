@@ -6,6 +6,7 @@ import androidx.lifecycle.ViewModelProviders;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import com.example.msp_app.R;
@@ -20,13 +21,14 @@ public class EventActivity extends AppCompatActivity {
     RecyclerView eventRecyclerView;
     EventAdapter eventAdapter;
     DataViewModel dataViewModel;
+    Intent transferEventDataIntent;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_event);
         getSupportActionBar().hide();
 
-
+        transferEventDataIntent=new Intent();
 
         eventRecyclerView=findViewById(R.id.recycle_view_events);
 
@@ -39,6 +41,7 @@ public class EventActivity extends AppCompatActivity {
             @Override
             public void onChanged(ArrayList<EventsModel> eventsModels) {
                 eventAdapter.setEvents(eventsModels);
+                transferEventDataIntent.putExtra("event",eventsModels);
             }
         });
 
