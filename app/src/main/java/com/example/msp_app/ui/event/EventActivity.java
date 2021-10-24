@@ -8,10 +8,13 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.ImageView;
 
 import com.example.msp_app.R;
 import com.example.msp_app.model.EventsModel;
 import com.example.msp_app.model.ProjectsModel;
+import com.example.msp_app.ui.home.HomeAcivity;
 import com.example.msp_app.ui.main.DataViewModel;
 import com.example.msp_app.ui.project.ProjectAdapter;
 
@@ -22,6 +25,7 @@ public class EventActivity extends AppCompatActivity {
     EventAdapter eventAdapter;
     DataViewModel dataViewModel;
     Intent transferEventDataIntent;
+    ImageView back;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -31,10 +35,11 @@ public class EventActivity extends AppCompatActivity {
         transferEventDataIntent=new Intent();
 
         eventRecyclerView=findViewById(R.id.recycle_view_events);
-
         eventRecyclerView.setLayoutManager(new LinearLayoutManager(this));
+
         dataViewModel = ViewModelProviders.of(this).get(DataViewModel.class);
         dataViewModel.getEvents();
+
         eventAdapter=new EventAdapter();
         eventRecyclerView.setAdapter(eventAdapter);
         dataViewModel.eventMutableLiveData.observe(this, new Observer<ArrayList<EventsModel>>() {
@@ -45,7 +50,14 @@ public class EventActivity extends AppCompatActivity {
             }
         });
 
-
+        back=findViewById(R.id.back_event);
+        back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i=new Intent(getApplicationContext(), HomeAcivity.class);
+                startActivity(i);
+            }
+        });
 
     }
 }

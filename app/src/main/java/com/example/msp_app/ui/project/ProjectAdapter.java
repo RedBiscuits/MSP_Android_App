@@ -47,12 +47,10 @@ public class ProjectAdapter extends RecyclerView.Adapter<ProjectAdapter.ProjectH
     @Override
     public void onBindViewHolder(@NonNull ProjectHolder holder, int position) {
           holder.ProjectName.setText(getProjects().get(position).getName());
-          holder.Discrption.setText(getProjects().get(position).getDescription());
+          holder.projectLink.setText(getProjects().get(position).getLink());
 
-              Picasso.get().load( getProjects().get( position ).getPhoto()).placeholder(R.drawable.recyshape2).into( holder.ProjectImage);
-              if(holder.ProjectImage==null) {
-                  holder.ProjectImage.setImageResource(R.drawable.recyshape2);
-              }
+              Picasso.get().load( getProjects().get( position ).getPhoto()).error(R.drawable.project_home).into( holder.ProjectImage);
+
 
 
     }
@@ -64,12 +62,12 @@ public class ProjectAdapter extends RecyclerView.Adapter<ProjectAdapter.ProjectH
     }
 
     public class ProjectHolder  extends  RecyclerView.ViewHolder{
-        TextView ProjectName,Discrption;
+        TextView ProjectName,projectLink;
         ImageView ProjectImage;
         public ProjectHolder(@NonNull View itemView) {
             super(itemView);
             ProjectName=itemView.findViewById(R.id.ProjectName);
-            Discrption=itemView.findViewById(R.id.content);
+            projectLink=itemView.findViewById(R.id.content);
             ProjectImage=itemView.findViewById(R.id.Projectimage);
 
         }

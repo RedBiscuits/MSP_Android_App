@@ -41,11 +41,10 @@ public class EventAdapter extends RecyclerView.Adapter<EventAdapter.EventViewHol
     public void onBindViewHolder(@NonNull EventAdapter.EventViewHolder holder, int position) {
         holder.title.setText(getEvents().get(position).getName());
         holder.discription.setText(getEvents().get(position).getDescription());
-        Picasso.get().load(getEvents().get(position).getImg()).into(holder.eventImage);
+        Picasso.get().load(getEvents().get(position).getImg()).error(R.drawable.event_home).into(holder.eventImage);
 
-        if(holder.eventImage.getDrawable()==null){
-            holder.eventImage.setImageResource(R.drawable.recyshape2);
-        }
+
+
 
 
     }

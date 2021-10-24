@@ -7,12 +7,16 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.view.animation.AnimationUtils;
 import android.view.animation.LayoutAnimationController;
+import android.widget.ImageView;
 
 import com.example.msp_app.R;
 import com.example.msp_app.model.CrewModel;
+import com.example.msp_app.ui.home.HomeAcivity;
 import com.example.msp_app.ui.main.DataViewModel;
 
 import java.util.ArrayList;
@@ -22,6 +26,7 @@ public class CrewAcivity extends AppCompatActivity {
     private CrewAdapter crewAdapter;
     private LayoutAnimationController controller;
     private Context context;
+    ImageView back;
     DataViewModel dataViewModel;
 
     @Override
@@ -53,5 +58,16 @@ public class CrewAcivity extends AppCompatActivity {
         controller= AnimationUtils.loadLayoutAnimation(context,R.anim.layout_animation_fail_down);
         recyclerView.setLayoutAnimation(controller);
         recyclerView.scheduleLayoutAnimation();
+
+
+        back=findViewById(R.id.back_crew);
+        back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i=new Intent(getApplicationContext(),HomeAcivity.class);
+                startActivity(i);
+            }
+        });
+
     }
 }

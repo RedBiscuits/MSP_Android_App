@@ -9,6 +9,7 @@ import android.view.View;
 import android.widget.ImageView;
 
 import com.example.msp_app.R;
+import com.example.msp_app.ui.home.HomeAcivity;
 
 public class AboutUs extends AppCompatActivity {
 
@@ -16,7 +17,7 @@ public class AboutUs extends AppCompatActivity {
             ,youtubeUri="https://www.youtube.com/channel/UCx4RR5PPCwfU_Om_9pAwaCA/featured",
             linedInUri="https://www.linkedin.com/company/msp-tech-club-asu/";
 
-    ImageView facebookImage,youtubeImage,linkedInImage,instigramImage;
+    ImageView facebookImage,youtubeImage,linkedInImage,instigramImage,back;
 
 
     @Override
@@ -51,6 +52,15 @@ public class AboutUs extends AppCompatActivity {
                 Intent youtubeIntent=new Intent(Intent.ACTION_VIEW);
                 youtubeIntent.setData( Uri.parse( youtubeUri) );
                 startActivity( youtubeIntent);
+            }
+        });
+
+        back=findViewById(R.id.back_about);
+        back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i=new Intent(getApplicationContext(), HomeAcivity.class);
+                startActivity(i);
             }
         });
 

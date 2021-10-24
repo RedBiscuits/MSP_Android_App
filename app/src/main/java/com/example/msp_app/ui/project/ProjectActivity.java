@@ -6,10 +6,14 @@ import androidx.lifecycle.ViewModelProviders;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.ImageView;
 
 import com.example.msp_app.R;
 import com.example.msp_app.model.ProjectsModel;
+import com.example.msp_app.ui.home.HomeAcivity;
 import com.example.msp_app.ui.main.DataViewModel;
 
 import java.util.ArrayList;
@@ -18,10 +22,12 @@ public class ProjectActivity extends AppCompatActivity {
    RecyclerView prjectRecyclerView;
    ProjectAdapter projectAdapter;
    DataViewModel dataViewModel;
+   ImageView back;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_project);
+        getSupportActionBar().hide();
         prjectRecyclerView=findViewById(R.id.recproject);
 
         prjectRecyclerView.setLayoutManager(new LinearLayoutManager(this));
@@ -29,6 +35,8 @@ public class ProjectActivity extends AppCompatActivity {
         dataViewModel.getProjects();
         projectAdapter=new ProjectAdapter(getApplicationContext());
         prjectRecyclerView.setAdapter(projectAdapter);
+
+
         dataViewModel.projectMutableLiveData.observe(this, new Observer<ArrayList<ProjectsModel>>() {
             @Override
             public void onChanged(ArrayList<ProjectsModel> projectsModels) {
@@ -37,7 +45,14 @@ public class ProjectActivity extends AppCompatActivity {
         });
 
 
-
+        back=findViewById(R.id.back_project);
+        back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i=new Intent(getApplicationContext(), HomeAcivity.class);
+                startActivity(i);
+            }
+        });
 
 
 

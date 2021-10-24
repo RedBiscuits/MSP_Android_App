@@ -7,6 +7,31 @@
     android:orientation="vertical"
     android:background="#E7EDF6"
     tools:context=".ui.project.ProjectActivity">
+
+     <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="#E7EDF6"
+        tools:context=".MainActivity">
+        <ImageView
+            android:id="@+id/back_project"
+            android:src="@drawable/back"
+            android:layout_width="wrap_content"
+            android:layout_height="70dp"
+            android:fontFamily="cursive"
+            android:gravity="center"
+            android:paddingLeft="20dp"
+            android:paddingTop="6dp"
+            android:textColor="#617C79"
+            android:layout_marginTop="10dp"
+            android:textSize="40sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.01" />
     <TextView
         android:id="@+id/Projects_id"
         android:layout_width="match_parent"
@@ -25,10 +50,11 @@
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.01" />
+     </LinearLayout>
     <HorizontalScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="10dp"
         android:scrollbars="none">
         <LinearLayout
             android:layout_width="match_parent"
@@ -74,14 +100,18 @@
         </LinearLayout>
     </HorizontalScrollView>
 
-
+  <androidx.cardview.widget.CardView
+      android:layout_width="match_parent"
+      android:layout_margin="10dp"
+      app:cardCornerRadius="25dp"
+      app:cardBackgroundColor="@color/back"
+      android:layout_height="match_parent">
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recproject"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginTop="20dp"
-
-        />
+       />
+  </androidx.cardview.widget.CardView>
 
 
 </LinearLayout>
