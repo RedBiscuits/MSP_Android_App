@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/menu_event"
+        android:title="event"
+        android:icon="@drawable/ic_event"
+        />
+    <item
+        android:id="@+id/menu_crew"
+        android:title="crew"
+        android:icon="@drawable/ic_team"
+
+        />
+    <item
+        android:id="@+id/menu_anchore"
+        android:title=""
+
+        />
+    <item
+        android:id="@+id/menu_recrutment"
+        android:title="recrutment"
+        android:icon="@drawable/ic_recrutment"
+        />
+    <item
+        android:id="@+id/menu_close"
+        android:title="close"
+        android:icon="@drawable/ic_close"
+        />
+
+
+
+</menu>

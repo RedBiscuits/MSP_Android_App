@@ -36,7 +36,6 @@ public class DataClient {
     public Call<ArrayList<CrewModel>> getCrew(){
         return crewInterface.getCrowData();
     }
-
     public Call<ArrayList<ProjectsModel>> getProjects(){
         return crewInterface.getProjectsData();
     }

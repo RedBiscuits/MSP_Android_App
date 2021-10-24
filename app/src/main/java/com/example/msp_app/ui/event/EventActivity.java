@@ -10,6 +10,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.ProgressBar;
 
 import com.example.msp_app.R;
 import com.example.msp_app.model.EventsModel;
@@ -26,11 +27,14 @@ public class EventActivity extends AppCompatActivity {
     DataViewModel dataViewModel;
     Intent transferEventDataIntent;
     ImageView back;
+    ProgressBar progressBar_event;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_event);
         getSupportActionBar().hide();
+
+        progressBar_event=findViewById(R.id.progressBar_event);
 
         transferEventDataIntent=new Intent();
 
@@ -45,6 +49,7 @@ public class EventActivity extends AppCompatActivity {
         dataViewModel.eventMutableLiveData.observe(this, new Observer<ArrayList<EventsModel>>() {
             @Override
             public void onChanged(ArrayList<EventsModel> eventsModels) {
+                progressBar_event.onVisibilityAggregated(false);
                 eventAdapter.setEvents(eventsModels);
                 transferEventDataIntent.putExtra("event",eventsModels);
             }

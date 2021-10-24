@@ -10,6 +10,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.ProgressBar;
 
 import com.example.msp_app.R;
 import com.example.msp_app.model.ProjectsModel;
@@ -23,13 +24,16 @@ public class ProjectActivity extends AppCompatActivity {
    ProjectAdapter projectAdapter;
    DataViewModel dataViewModel;
    ImageView back;
+   ProgressBar progressBar_project;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_project);
         getSupportActionBar().hide();
-        prjectRecyclerView=findViewById(R.id.recproject);
 
+        progressBar_project=findViewById(R.id.progressBar_project);
+
+        prjectRecyclerView=findViewById(R.id.recproject);
         prjectRecyclerView.setLayoutManager(new LinearLayoutManager(this));
         dataViewModel = ViewModelProviders.of(this).get(DataViewModel.class);
         dataViewModel.getProjects();
@@ -40,6 +44,7 @@ public class ProjectActivity extends AppCompatActivity {
         dataViewModel.projectMutableLiveData.observe(this, new Observer<ArrayList<ProjectsModel>>() {
             @Override
             public void onChanged(ArrayList<ProjectsModel> projectsModels) {
+                progressBar_project.onVisibilityAggregated(false);
                projectAdapter.setProjects(projectsModels);
             }
         });

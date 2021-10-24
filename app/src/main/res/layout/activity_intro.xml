@@ -33,9 +33,9 @@
         android:layout_marginBottom="16dp"
         android:background="#fff"
         android:drawableRight="@drawable/ic_baseline_arrow_forward_24"
-        android:drawableTint="@color/tabindicator_gray"
+        android:drawableTint="@color/logo_blue"
         android:text="Next"
-        android:textColor="@color/tabindicator_gray"
+        android:textColor="@color/logo_blue"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 

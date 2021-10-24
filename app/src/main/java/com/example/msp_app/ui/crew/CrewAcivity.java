@@ -8,11 +8,13 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Context;
 import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
 import android.view.animation.AnimationUtils;
 import android.view.animation.LayoutAnimationController;
 import android.widget.ImageView;
+import android.widget.ProgressBar;
 
 import com.example.msp_app.R;
 import com.example.msp_app.model.CrewModel;
@@ -28,6 +30,7 @@ public class CrewAcivity extends AppCompatActivity {
     private Context context;
     ImageView back;
     DataViewModel dataViewModel;
+    ProgressBar crewProgress;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,15 +38,23 @@ public class CrewAcivity extends AppCompatActivity {
         setContentView(R.layout.activity_crew);
         getSupportActionBar().hide();
 
+        crewProgress=findViewById(R.id.progressBar_crew);
+
         dataViewModel = ViewModelProviders.of(this).get(DataViewModel.class);
         dataViewModel.getCrew();
 
         crewAdapter=new CrewAdapter(getApplicationContext());
+
+
         dataViewModel.crewMutableLiveData.observe(this, new Observer<ArrayList<CrewModel>>() {
             @Override
             public void onChanged(ArrayList<CrewModel> crewModels) {
+                if(crewModels!=null){
+                    crewProgress.onVisibilityAggregated(false);
+                    crewAdapter.setMembersList(crewModels);
 
-                crewAdapter.setMembersList(crewModels);
+                }
+
             }
         });
 

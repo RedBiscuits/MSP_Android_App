@@ -18,4 +18,8 @@
         <item name="android:theme">@style/splash</item>
 
     </style>
+
+    <style name="MaterialComponents" parent="Theme.MaterialComponents">
+
+    </style>
 </resources>

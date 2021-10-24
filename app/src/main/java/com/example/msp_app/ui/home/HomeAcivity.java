@@ -13,14 +13,20 @@ import com.example.msp_app.ui.about_us.AboutUs;
 import com.example.msp_app.ui.crew.CrewAcivity;
 import com.example.msp_app.ui.event.EventActivity;
 import com.example.msp_app.ui.project.ProjectActivity;
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class HomeAcivity extends AppCompatActivity {
+    BottomNavigationView bottomNavigationView;
    ImageView crewBtn,eventBtn,projectBtn,aboutUsBtn;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
         getSupportActionBar().hide();
+
+        bottomNavigationView=findViewById(R.id.bottm_nav);
+        bottomNavigationView.setBackground(null);
+        bottomNavigationView.getMenu().getItem(2).setEnabled(false);
 
         crewBtn=findViewById(R.id.btn_crew);
         crewBtn.setOnClickListener(new View.OnClickListener() {
