@@ -1,6 +1,10 @@
 package com.example.msp_app.ui.crew;
 
 import android.content.Context;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.os.Build;
+import android.os.Environment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -9,6 +13,7 @@ import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
+import androidx.annotation.RequiresApi;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.msp_app.R;
@@ -16,7 +21,13 @@ import com.example.msp_app.model.CrewModel;
 import com.squareup.picasso.Picasso;
 
 
+import java.io.ByteArrayOutputStream;
+import java.io.File;
+import java.io.FileOutputStream;
 import java.util.ArrayList;
+import java.util.Base64;
+
+import okio.ByteString;
 
 public class CrewAdapter extends RecyclerView.Adapter
         <CrewAdapter.MemberViewHolder> {
@@ -44,6 +55,7 @@ public class CrewAdapter extends RecyclerView.Adapter
         return new MemberViewHolder(view);
     }
 
+    @RequiresApi(api = Build.VERSION_CODES.O)
     @Override
     public void onBindViewHolder(@NonNull MemberViewHolder holder, int position) {
         holder.onBind(getMembersList().get(position));
@@ -59,6 +71,7 @@ public class CrewAdapter extends RecyclerView.Adapter
 
         private TextView txtName,txtPosition,txtCommunity;
         private Animation animation,anim;
+        ImageView img_memeber;
         public MemberViewHolder(@NonNull View itemView) {
             super(itemView);
             txtName=itemView.findViewById(R.id.txt_member_name);
@@ -68,16 +81,26 @@ public class CrewAdapter extends RecyclerView.Adapter
             txtPosition.setAnimation(animation);
             txtCommunity=itemView.findViewById(R.id.txt_community);
             txtCommunity.setAnimation(animation);
-           // imageViewMember=itemView.findViewById(R.id.img_member);
+           img_memeber=itemView.findViewById(R.id.img_member);
 
         }
 
+        @RequiresApi(api = Build.VERSION_CODES.O)
         public void onBind(CrewModel member)
         {
             txtName.setText(member.getName());
             txtPosition.setText(member.getPosition());
             txtCommunity.setText(member.getCommittee());
-           // Picasso.get().load(member.).into(imageViewMember);
+            convertImageType(member.getImg());
+
+        }
+
+        @RequiresApi(api = Build.VERSION_CODES.O)
+        public void convertImageType(String imgUrl){
+            //decode base64 string to image
+            byte[] decodeString= Base64.getDecoder().decode(imgUrl);
+            Bitmap decoded=BitmapFactory.decodeByteArray(decodeString,0,decodeString.length);
+            img_memeber.setImageBitmap(decoded);
 
         }
     }

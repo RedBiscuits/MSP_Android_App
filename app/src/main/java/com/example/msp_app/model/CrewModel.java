@@ -22,6 +22,8 @@ public class CrewModel {
     private String department;
     @SerializedName("Committee")
     private String committee;
+    @SerializedName("img")
+    private  String img;
 
     public Integer getId() {
         return id;
@@ -95,4 +97,7 @@ public class CrewModel {
         this.committee = committee;
     }
 
+    public String getImg() {
+        return img;
+    }
 }

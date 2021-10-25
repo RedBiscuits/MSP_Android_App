@@ -1,9 +1,12 @@
 package com.example.msp_app.ui.home;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
@@ -14,6 +17,7 @@ import com.example.msp_app.ui.crew.CrewAcivity;
 import com.example.msp_app.ui.event.EventActivity;
 import com.example.msp_app.ui.project.ProjectActivity;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.google.android.material.navigation.NavigationBarView;
 
 public class HomeAcivity extends AppCompatActivity {
     BottomNavigationView bottomNavigationView;
@@ -24,9 +28,6 @@ public class HomeAcivity extends AppCompatActivity {
         setContentView(R.layout.activity_home);
         getSupportActionBar().hide();
 
-        bottomNavigationView=findViewById(R.id.bottm_nav);
-        bottomNavigationView.setBackground(null);
-        bottomNavigationView.getMenu().getItem(2).setEnabled(false);
 
         crewBtn=findViewById(R.id.btn_crew);
         crewBtn.setOnClickListener(new View.OnClickListener() {
@@ -63,6 +64,37 @@ public class HomeAcivity extends AppCompatActivity {
                 startActivity(i);
             }
         });
+
+        bottomNavigationView=findViewById(R.id.bottm_nav);
+        bottomNavigationView.setBackground(null);
+        bottomNavigationView.getMenu().getItem(2).setEnabled(false);
+        bottomNavigationView.setOnItemSelectedListener(new NavigationBarView.OnItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+                switch (item.getItemId()){
+                    case R.id.fab: break;
+                    case R.id.menu_event:
+                        Intent intentEvent = new Intent(getApplicationContext(), EventActivity.class);
+                        startActivity(intentEvent);
+                        break;
+                    case R.id.menu_crew:
+                        Intent intentCrew = new Intent(getApplicationContext(), CrewAcivity.class);
+                        startActivity(intentCrew);
+                        break;
+                    case R.id.menu_recrutment:
+                        Intent recrutmentInIntent=new Intent(Intent.ACTION_VIEW);
+                        recrutmentInIntent.setData( Uri.parse( "https://reqruitment.msp-asu.me/") );
+                        startActivity( recrutmentInIntent );
+                        break;
+                    case R.id.menu_close:
+                        System.exit(0);
+                        break;
+                        }
+
+                return true;
+            }
+        });
+
+        }
     }
 
-}
