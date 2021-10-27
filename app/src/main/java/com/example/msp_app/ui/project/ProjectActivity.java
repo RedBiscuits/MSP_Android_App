@@ -7,6 +7,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
@@ -19,7 +20,7 @@ import com.example.msp_app.ui.main.DataViewModel;
 
 import java.util.ArrayList;
 
-public class ProjectActivity extends AppCompatActivity {
+public class ProjectActivity extends AppCompatActivity  {
    RecyclerView prjectRecyclerView;
    ProjectAdapter projectAdapter;
    DataViewModel dataViewModel;
@@ -62,4 +63,6 @@ public class ProjectActivity extends AppCompatActivity {
 
 
     }
+
+
 }

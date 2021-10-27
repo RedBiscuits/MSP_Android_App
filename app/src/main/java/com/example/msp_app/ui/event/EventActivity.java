@@ -5,7 +5,7 @@ import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProviders;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-
+import com.example.msp_app.R;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;

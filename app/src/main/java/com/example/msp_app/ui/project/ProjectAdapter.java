@@ -19,7 +19,16 @@ import java.util.ArrayList;
 public class ProjectAdapter extends RecyclerView.Adapter<ProjectAdapter.ProjectHolder> {
     private ArrayList<ProjectsModel>projects=new ArrayList<ProjectsModel>();
     Context context;
+    private OnItemClickListner mlistner;
+    public interface OnItemClickListner
+    {
+        void OnItemClick(int position);
+    }
+    public  void setOnItemClickListner(OnItemClickListner listner)
+    {
+        mlistner=listner;
 
+    }
 
     public ProjectAdapter(Context context) {
         this.context = context;
@@ -46,11 +55,13 @@ public class ProjectAdapter extends RecyclerView.Adapter<ProjectAdapter.ProjectH
 
     @Override
     public void onBindViewHolder(@NonNull ProjectHolder holder, int position) {
-          holder.ProjectName.setText(getProjects().get(position).getName());
-          holder.projectLink.setText(getProjects().get(position).getLink());
+        holder.ProjectName.setText(getProjects().get(position).getName());
+        holder.Discrption.setText(getProjects().get(position).getTeam());
 
-              Picasso.get().load( getProjects().get( position ).getPhoto()).error(R.drawable.project_home).into( holder.ProjectImage);
-
+        Picasso.get().load( getProjects().get( position ).getPhoto()).placeholder(R.drawable.project).into( holder.ProjectImage);
+        if(holder.ProjectImage==null) {
+            holder.ProjectImage.setImageResource(R.drawable.recyshape2);
+        }
 
 
     }
@@ -62,15 +73,26 @@ public class ProjectAdapter extends RecyclerView.Adapter<ProjectAdapter.ProjectH
     }
 
     public class ProjectHolder  extends  RecyclerView.ViewHolder{
-        TextView ProjectName,projectLink;
+        TextView ProjectName,Discrption;
         ImageView ProjectImage;
         public ProjectHolder(@NonNull View itemView) {
             super(itemView);
             ProjectName=itemView.findViewById(R.id.ProjectName);
-            projectLink=itemView.findViewById(R.id.content);
+            Discrption=itemView.findViewById(R.id.content);
             ProjectImage=itemView.findViewById(R.id.Projectimage);
-
+            itemView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    if(mlistner!=null)
+                    {
+                        int position = getAdapterPosition();
+                        if(position!=RecyclerView.NO_POSITION)
+                        {
+                            mlistner.OnItemClick(position);
+                        }
+                    }
+                }
+            });
         }
     }
 }
-

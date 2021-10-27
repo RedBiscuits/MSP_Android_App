@@ -91,17 +91,17 @@ public class CrewAdapter extends RecyclerView.Adapter
             txtName.setText(member.getName());
             txtPosition.setText(member.getPosition());
             txtCommunity.setText(member.getCommittee());
-            convertImageType(member.getImg());
+            Picasso.get().load(member.getImg()).error(R.drawable.admin).into(img_memeber);
 
         }
 
-        @RequiresApi(api = Build.VERSION_CODES.O)
+      /*  @RequiresApi(api = Build.VERSION_CODES.O)
         public void convertImageType(String imgUrl){
             //decode base64 string to image
             byte[] decodeString= Base64.getDecoder().decode(imgUrl);
             Bitmap decoded=BitmapFactory.decodeByteArray(decodeString,0,decodeString.length);
             img_memeber.setImageBitmap(decoded);
 
-        }
+        }*/
     }
 }

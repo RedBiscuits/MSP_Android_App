@@ -5,14 +5,13 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="#E7EDF6"
+    android:background="@color/back"
     tools:context=".ui.project.ProjectActivity">
 
      <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:background="#E7EDF6"
         tools:context=".MainActivity">
         <ImageView
             android:id="@+id/back_project"
