@@ -3,6 +3,7 @@ package com.example.msp_app.ui.home;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.app.AppCompatDelegate;
+import androidx.cardview.widget.CardView;
 
 import android.content.Intent;
 import android.net.Uri;
@@ -23,8 +24,13 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationBarView;
 
 public class HomeAcivity extends AppCompatActivity {
-    BottomNavigationView bottomNavigationView;
-   ImageView crewBtn,eventBtn,projectBtn,aboutUsBtn;
+    //BottomNavigationView bottomNavigationView;
+  CardView crewBtn,eventBtn,projectBtn,aboutUsBtn;
+    final String faceBookUri="https://www.facebook.com/ASUTC"
+            ,youtubeUri="https://www.youtube.com/channel/UCx4RR5PPCwfU_Om_9pAwaCA/featured",
+            linedInUri="https://www.linkedin.com/company/msp-tech-club-asu/";
+
+    ImageView facebookImage,youtubeImage,linkedInImage,recrute;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,7 +39,7 @@ public class HomeAcivity extends AppCompatActivity {
         getSupportActionBar().hide();
 
 
-        crewBtn = findViewById(R.id.btn_crew);
+        crewBtn = findViewById(R.id.card_crew);
         crewBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -42,7 +48,7 @@ public class HomeAcivity extends AppCompatActivity {
             }
         });
 
-        aboutUsBtn = findViewById(R.id.btn_about);
+        aboutUsBtn = findViewById(R.id.card_about);
         aboutUsBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -51,7 +57,7 @@ public class HomeAcivity extends AppCompatActivity {
             }
         });
 
-        eventBtn = findViewById(R.id.btn_event);
+        eventBtn = findViewById(R.id.card_event);
         eventBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -60,7 +66,7 @@ public class HomeAcivity extends AppCompatActivity {
             }
         });
 
-        projectBtn = findViewById(R.id.btn_project);
+        projectBtn = findViewById(R.id.card_project);
         projectBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -69,7 +75,43 @@ public class HomeAcivity extends AppCompatActivity {
             }
         });
 
-        bottomNavigationView = findViewById(R.id.bottm_nav);
+         facebookImage=findViewById(R.id.bottom_facebook);
+        facebookImage.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent faceookInIntent=new Intent(Intent.ACTION_VIEW);
+                faceookInIntent.setData( Uri.parse( faceBookUri) );
+                startActivity( faceookInIntent );
+            }
+        });
+        linkedInImage=findViewById(R.id.bottom_linkedin);
+        linkedInImage.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent linkedInIntent=new Intent(Intent.ACTION_VIEW);
+                linkedInIntent.setData( Uri.parse( linedInUri) );
+                startActivity( linkedInIntent );
+            }
+        });
+         youtubeImage=findViewById(R.id.bottm_youtube);
+        youtubeImage.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent youtubeIntent=new Intent(Intent.ACTION_VIEW);
+                youtubeIntent.setData( Uri.parse( youtubeUri) );
+                startActivity( youtubeIntent);
+            }
+        });
+        recrute=findViewById(R.id.bottom_recrutment_btn);
+        recrute.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent recrutmentInIntent = new Intent(Intent.ACTION_VIEW);
+                recrutmentInIntent.setData(Uri.parse("https://reqruitment.msp-asu.me/"));
+                startActivity(recrutmentInIntent);
+            }
+        });
+       /* bottomNavigationView = findViewById(R.id.bottm_nav);
         bottomNavigationView.setBackground(null);
         bottomNavigationView.getMenu().getItem(2).setEnabled(false);
         bottomNavigationView.setOnItemSelectedListener(new NavigationBarView.OnItemSelectedListener() {
@@ -98,28 +140,8 @@ public class HomeAcivity extends AppCompatActivity {
 
                 return true;
             }
-        });
-        //change mode
-      //  switchMode = findViewById(R.id.switch_mode);
-        /*if (AppCompatDelegate.getDefaultNightMode() == AppCompatDelegate.MODE_NIGHT_YES) {
-            switchMode.setChecked(true);
-        }
+        });*/
 
-        switchMode.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
-                if(b){
-                    AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES);
-
-                }else {
-                    AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
-
-                }
-            }
-        });
-
-
-        }*/
     }
     }
 

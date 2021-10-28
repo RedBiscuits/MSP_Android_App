@@ -55,13 +55,11 @@ public class ProjectAdapter extends RecyclerView.Adapter<ProjectAdapter.ProjectH
 
     @Override
     public void onBindViewHolder(@NonNull ProjectHolder holder, int position) {
+        String[] date=projects.get(position).getCreatedAt().split("T");
         holder.ProjectName.setText(getProjects().get(position).getName());
         holder.Discrption.setText(getProjects().get(position).getTeam());
-
+        holder.time.setText(date[0]);
         Picasso.get().load( getProjects().get( position ).getPhoto()).placeholder(R.drawable.project).into( holder.ProjectImage);
-        if(holder.ProjectImage==null) {
-            holder.ProjectImage.setImageResource(R.drawable.recyshape2);
-        }
 
 
     }
@@ -73,12 +71,13 @@ public class ProjectAdapter extends RecyclerView.Adapter<ProjectAdapter.ProjectH
     }
 
     public class ProjectHolder  extends  RecyclerView.ViewHolder{
-        TextView ProjectName,Discrption;
+        TextView ProjectName,Discrption,time;
         ImageView ProjectImage;
         public ProjectHolder(@NonNull View itemView) {
             super(itemView);
             ProjectName=itemView.findViewById(R.id.ProjectName);
             Discrption=itemView.findViewById(R.id.content);
+            time=itemView.findViewById(R.id.time_discription2_txt);
             ProjectImage=itemView.findViewById(R.id.Projectimage);
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override

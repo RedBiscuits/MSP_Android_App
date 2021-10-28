@@ -5,14 +5,13 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="#E7EDF6"
+    android:background="@color/white"
     tools:context=".ui.crew.CrewAcivity">
 
     <LinearLayout
         android:id="@+id/layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@drawable/web_custom"
         android:orientation="horizontal"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -27,7 +26,7 @@
         android:paddingLeft="20dp"
         android:paddingTop="6dp"
         android:src="@drawable/back"
-        android:textColor="#617C79"
+        android:textColor="@drawable/color_train"
         android:textSize="40sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -46,7 +45,7 @@
         android:paddingLeft="20dp"
         android:paddingTop="15dp"
         android:text="MSP CREW"
-        android:textColor="#617C79"
+        android:textColor="@color/home_blue"
         android:textSize="35sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -57,12 +56,84 @@
         app:layout_constraintVertical_bias="0.01" />
     </LinearLayout>
 
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="10dp"
+        android:scrollbars="none">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+
+                android:layout_width="150dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="5dp"
+                android:background="@drawable/color_train"
+                app:backgroundTint="@null"
+                android:text="Android"
+                android:textColor="@color/black" />
+
+            <Button
+                app:backgroundTint="@null"
+                android:layout_width="150dp"
+                android:layout_height="40dp"
+                android:text="Flutter"
+                android:background="@drawable/web_custom"
+                android:textColor="@color/black"
+                android:layout_marginLeft="30dp"/>
+
+            <Button
+                app:backgroundTint="@null"
+                android:layout_width="150dp"
+                android:layout_height="40dp"
+                android:text="Web"
+                android:background="@drawable/color_train"
+                android:textColor="@color/cardview_dark_background"
+                android:layout_marginLeft="30dp"/>
+
+            <Button
+                app:backgroundTint="@null"
+                android:layout_width="150dp"
+                android:layout_height="40dp"
+                android:text="Game"
+                android:background="@drawable/web_custom"
+                android:textColor="@color/cardview_dark_background"
+                android:layout_marginLeft="30dp"/>
+            <Button
+                app:backgroundTint="@null"
+                android:layout_width="150dp"
+                android:layout_height="40dp"
+                android:text="Data Science"
+                android:background="@drawable/color_train"
+                android:textColor="@color/cardview_dark_background"
+                android:layout_marginLeft="30dp"/>
+            <Button
+                app:backgroundTint="@null"
+                android:layout_width="150dp"
+                android:layout_height="40dp"
+                android:text="Cyber "
+                android:background="@drawable/web_custom"
+                android:textColor="@color/cardview_dark_background"
+                android:layout_marginLeft="30dp"/>
+            <Button
+                app:backgroundTint="@null"
+                android:layout_width="150dp"
+                android:layout_height="40dp"
+                android:text="Machine Learning"
+                android:background="@drawable/color_train"
+                android:textColor="@color/cardview_dark_background"
+                android:layout_marginLeft="30dp"/>
+        </LinearLayout>
+    </HorizontalScrollView>
+
  
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_margin="10dp"
         app:cardCornerRadius="25dp"
-        app:cardBackgroundColor="@color/back"
         android:layout_height="match_parent">
         <ProgressBar
             android:id="@+id/progressBar_crew"
@@ -71,12 +142,12 @@
             android:layout_gravity="center"
             android:layout_height="wrap_content"
             android:translationZ="120dp"
-            android:outlineSpotShadowColor="@color/white"
+            android:outlineSpotShadowColor="@color/logo_gray"
             android:indeterminateTint="@color/tabindicator_gray"/>
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recycle_view_crew"
         android:layout_width="match_parent"
-        android:layout_height="610dp"
+        android:layout_height="match_parent"
         android:layout_margin="10dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

@@ -7,16 +7,24 @@
     app:cardBackgroundColor="@color/back"
     >
 
-    <ImageView
-        android:id="@+id/img_event"
-        android:scaleType="fitXY"
-        android:layout_width="130dp"
-        android:layout_height="80dp"
-        android:layout_marginTop="10dp"
-        android:translationZ="120dp"
-        android:layout_gravity="center_horizontal"
-        android:src="@drawable/about" />
 
+    <LinearLayout
+        android:layout_marginBottom="50dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:translationZ="100dp">
+        <ImageView
+            android:id="@+id/img_event"
+            android:scaleType="fitXY"
+            android:background="@drawable/color_train"
+            android:layout_width="130dp"
+            android:layout_height="80dp"
+            android:layout_marginTop="10dp"
+            android:translationZ="120dp"
+            android:layout_gravity="center_horizontal"
+            android:src="@drawable/project_logo" />
+    </LinearLayout>
     <androidx.cardview.widget.CardView
         android:layout_width="320dp"
         android:layout_height="170dp"
@@ -26,51 +34,57 @@
         android:layout_marginTop="30dp"
         android:orientation="vertical"
         app:cardCornerRadius="30dp">
-        <TextView
-            android:paddingTop="50dp"
-            android:id="@+id/event_name_txt"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="20dp"
-            android:layout_marginTop="20dp"
-            android:text="MSP APP"
-            android:textColor="@color/white"
-            android:textSize="18sp"
-            android:textStyle="bold" />
-
-        <TextView
-            android:id="@+id/event_discription_txt"
+        <RelativeLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginVertical="50dp"
-            android:layout_marginLeft="20dp"
-            android:paddingTop="50dp"
-            android:text="Asdasdasd asd as dasdasd ad asdsa"
-            android:textColor="@color/white"
-            android:textSize="14dp" />
+            android:background="@drawable/color_train">
 
-        <TextView
-            android:id="@+id/event_discription2_txt"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="80dp"
-            android:layout_marginLeft="20dp"
-            android:paddingTop="50dp"
-            android:text="Shaimaa Hasaan Ali"
-            android:textColor="@color/white"
-            android:textSize="14dp" />
+            <TextView
+                android:id="@+id/event_name_txt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:paddingTop="50dp"
+                android:text="MSP APP"
+                android:textColor="@color/home_blue"
+                android:textSize="18sp"
+                android:textStyle="bold" />
 
-        <TextView
-            android:id="@+id/event_discription3_txt"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
-            android:background="@drawable/web_custom"
-            android:layout_marginTop="30dp"
-            android:layout_marginLeft="240dp"
-            android:text="30h"
-            android:gravity="center"
-            android:textColor="#617C79"
-            android:textSize="14dp" />
+            <TextView
+                android:id="@+id/event_discription_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="50dp"
+                android:layout_marginLeft="20dp"
+                android:paddingTop="50dp"
+                android:text="Asdasdasd asd as dasdasd ad asdsa"
+                android:textColor="@color/home_blue"
+                android:textSize="14dp" />
+
+            <TextView
+                android:id="@+id/event_time_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="80dp"
+                android:paddingTop="50dp"
+                android:text="Shaimaa Hasaan Ali"
+                android:textColor="@color/home_blue"
+                android:textSize="14dp" />
+
+            <TextView
+                android:id="@+id/event_price_txt"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_marginLeft="240dp"
+                android:layout_marginTop="30dp"
+                android:background="@drawable/round"
+                android:gravity="center"
+                android:text="30h"
+                android:textColor="#617C79"
+                android:textSize="14dp" />
+        </RelativeLayout>
     </androidx.cardview.widget.CardView>
 
 </androidx.cardview.widget.CardView>

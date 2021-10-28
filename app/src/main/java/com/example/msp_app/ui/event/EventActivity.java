@@ -8,6 +8,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.example.msp_app.R;
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Parcelable;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
@@ -19,14 +20,16 @@ import com.example.msp_app.ui.home.HomeAcivity;
 import com.example.msp_app.ui.main.DataViewModel;
 import com.example.msp_app.ui.project.ProjectAdapter;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 
-public class EventActivity extends AppCompatActivity {
+public class EventActivity extends AppCompatActivity implements EventAdapter.OnItemClickListner {
     RecyclerView eventRecyclerView;
     EventAdapter eventAdapter;
     DataViewModel dataViewModel;
     Intent transferEventDataIntent;
     ImageView back;
+    ArrayList<EventsModel>events=new ArrayList<>();
     ProgressBar progressBar_event;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -51,7 +54,8 @@ public class EventActivity extends AppCompatActivity {
             public void onChanged(ArrayList<EventsModel> eventsModels) {
                 progressBar_event.onVisibilityAggregated(false);
                 eventAdapter.setEvents(eventsModels);
-                transferEventDataIntent.putExtra("event",eventsModels);
+                events=eventsModels;
+                eventAdapter.setOnItemClickListner(EventActivity.this);
             }
         });
 
@@ -65,4 +69,20 @@ public class EventActivity extends AppCompatActivity {
         });
 
     }
+
+    @Override
+    public void OnItemClick(int position) {
+
+        Intent i=new Intent(getApplicationContext(),EventDescription.class);
+        i.putExtra("tobic",events.get(position).getTopic());
+        i.putExtra("disc",events.get(position).getDescription());
+        i.putExtra("time",events.get(position).getCreatedAt());
+        i.putExtra("fees",events.get(position).getFees());
+        i.putExtra("img",events.get(position).getImg());
+        i.putExtra("location",events.get(position).getLocation());
+        startActivity(i);
+
+    }
+
+
 }
