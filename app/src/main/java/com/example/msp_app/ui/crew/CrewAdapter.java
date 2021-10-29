@@ -10,6 +10,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
+import android.widget.Filter;
+import android.widget.Filterable;
 import android.widget.ImageView;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
@@ -18,6 +20,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.msp_app.R;
 import com.example.msp_app.model.CrewModel;
+import com.example.msp_app.model.ProjectsModel;
 import com.squareup.picasso.Picasso;
 
 
@@ -26,20 +29,23 @@ import java.io.File;
 import java.io.FileOutputStream;
 import java.util.ArrayList;
 import java.util.Base64;
+import java.util.List;
 
 import okio.ByteString;
 
 public class CrewAdapter extends RecyclerView.Adapter
-        <CrewAdapter.MemberViewHolder> {
-    private ArrayList<CrewModel> membersList=new ArrayList<>();
+        <CrewAdapter.MemberViewHolder> implements  Filterable {
+    private List<CrewModel> membersList=new ArrayList<>();
+    private List<CrewModel> crewFull;
     private Context context;
 
     public void setMembersList(ArrayList<CrewModel> membersList) {
         this.membersList = membersList;
+        this.crewFull=new ArrayList<>(membersList);
         notifyDataSetChanged();
     }
 
-    public ArrayList<CrewModel> getMembersList() {
+    public List<CrewModel> getMembersList() {
         return membersList;
     }
 
@@ -104,4 +110,40 @@ public class CrewAdapter extends RecyclerView.Adapter
 
         }*/
     }
+
+    @Override
+    public Filter getFilter() {
+        return projectFilter;
+    }
+
+    private Filter projectFilter=new Filter() {
+        @Override
+        protected FilterResults performFiltering(CharSequence charSequence) {
+            List<CrewModel> filteredList=new ArrayList<>();
+
+            if(charSequence==null || charSequence.length()==0){
+                filteredList.addAll(crewFull);
+            }else{
+                String filterPattern= charSequence.toString().toLowerCase().trim();
+                for(CrewModel item:crewFull){
+                    if(item.getCommittee().toLowerCase().contains(filterPattern)){
+                        filteredList.add(item);
+                    }
+                }
+            }
+
+            FilterResults results=new FilterResults();
+            results.values=filteredList;
+
+            return results;
+        }
+
+        @Override
+        protected void publishResults(CharSequence charSequence, FilterResults filterResults) {
+            membersList.clear();
+            membersList.addAll((List) filterResults.values);
+            notifyDataSetChanged();
+
+        }
+    };
 }

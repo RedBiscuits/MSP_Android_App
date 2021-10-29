@@ -13,6 +13,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.view.animation.AnimationUtils;
 import android.view.animation.LayoutAnimationController;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
 
@@ -31,6 +32,8 @@ public class CrewAcivity extends AppCompatActivity {
     ImageView back;
     DataViewModel dataViewModel;
     ProgressBar crewProgress;
+     String filterString;
+    Button android,flutter,web,machine,game,dataScience,cyber,hr,pr,media,highBoard;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -77,6 +80,98 @@ public class CrewAcivity extends AppCompatActivity {
             public void onClick(View view) {
                 Intent i=new Intent(getApplicationContext(),HomeAcivity.class);
                 startActivity(i);
+            }
+        });
+
+        android=findViewById(R.id.crew_android);
+        android.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                filterString="android";
+                crewAdapter.getFilter().filter(filterString);
+            }
+        });
+        flutter=findViewById(R.id.crew_flutter);
+        flutter.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                filterString="flutter";
+                crewAdapter.getFilter().filter(filterString);
+            }
+        });
+        web=findViewById(R.id.crew_web);
+        web.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                filterString="web";
+                crewAdapter.getFilter().filter(filterString);
+            }
+        });
+        game=findViewById(R.id.crew_game);
+        game.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                filterString="game";
+                crewAdapter.getFilter().filter(filterString);
+            }
+        });
+        dataScience=findViewById(R.id.crew_data_science);
+        dataScience.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                filterString="data Science";
+                crewAdapter.getFilter().filter(filterString);
+            }
+        });
+
+        cyber=findViewById(R.id.crew_cyber);
+        cyber.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                filterString="cyber";
+                crewAdapter.getFilter().filter(filterString);
+            }
+        });
+        machine=findViewById(R.id.crew_machine);
+        machine.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                filterString="machine Learning";
+                crewAdapter.getFilter().filter(filterString);
+            }
+        });
+
+        media=findViewById(R.id.crew_media);
+        media.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                filterString="media";
+                crewAdapter.getFilter().filter(filterString);
+            }
+        });
+
+        hr=findViewById(R.id.crew_hr);
+        hr.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                filterString="hr";
+                crewAdapter.getFilter().filter(filterString);
+            }
+        });
+        pr=findViewById(R.id.crew_pr);
+        pr.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                filterString="pr";
+                crewAdapter.getFilter().filter(filterString);
+            }
+        });
+        highBoard=findViewById(R.id.crew_high_board);
+        highBoard.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                filterString="highboard";
+                crewAdapter.getFilter().filter(filterString);
             }
         });
 

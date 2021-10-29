@@ -4,8 +4,11 @@ import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Filter;
+import android.widget.Filterable;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
@@ -15,11 +18,18 @@ import com.example.msp_app.model.ProjectsModel;
 import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
+import java.util.Collection;
+import java.util.List;
+import java.util.Locale;
 
-public class ProjectAdapter extends RecyclerView.Adapter<ProjectAdapter.ProjectHolder> {
-    private ArrayList<ProjectsModel>projects=new ArrayList<ProjectsModel>();
+public class ProjectAdapter extends RecyclerView.Adapter<ProjectAdapter.ProjectHolder> implements Filterable {
+    private List<ProjectsModel>projects=new ArrayList<ProjectsModel>();
+    private List<ProjectsModel>projectsModelsFull;
     Context context;
     private OnItemClickListner mlistner;
+
+
+
     public interface OnItemClickListner
     {
         void OnItemClick(int position);
@@ -34,12 +44,13 @@ public class ProjectAdapter extends RecyclerView.Adapter<ProjectAdapter.ProjectH
         this.context = context;
     }
 
-    public ArrayList<ProjectsModel> getProjects() {
+    public List<ProjectsModel> getProjects() {
         return projects;
     }
 
-    public void setProjects(ArrayList<ProjectsModel> projects) {
+    public void setProjects(List<ProjectsModel> projects) {
         this.projects = projects;
+        this.projectsModelsFull=new ArrayList<>(projects);
         notifyDataSetChanged();
     }
 
@@ -94,4 +105,40 @@ public class ProjectAdapter extends RecyclerView.Adapter<ProjectAdapter.ProjectH
             });
         }
     }
+    @Override
+    public Filter getFilter() {
+        return projectFilter;
+    }
+
+    private Filter projectFilter=new Filter() {
+        @Override
+        protected FilterResults performFiltering(CharSequence charSequence) {
+            List<ProjectsModel>filteredList=new ArrayList<>();
+
+            if(charSequence==null || charSequence.length()==0){
+                filteredList.addAll(projectsModelsFull);
+                Toast.makeText(context,"No Project yet",Toast.LENGTH_LONG).show();
+            }else{
+                String filterPattern= charSequence.toString().toLowerCase().trim();
+                for(ProjectsModel item:projectsModelsFull){
+                    if(item.getTeam().toLowerCase().contains(filterPattern)){
+                        filteredList.add(item);
+                    }
+                }
+            }
+
+            FilterResults results=new FilterResults();
+            results.values=filteredList;
+
+            return results;
+        }
+
+        @Override
+        protected void publishResults(CharSequence charSequence, FilterResults filterResults) {
+                             projects.clear();
+                             projects.addAll((List) filterResults.values);
+                             notifyDataSetChanged();
+
+        }
+    };
 }

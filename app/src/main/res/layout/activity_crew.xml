@@ -67,7 +67,16 @@
             android:orientation="horizontal">
 
             <Button
-
+                android:id="@+id/crew_high_board"
+                android:layout_width="150dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="5dp"
+                android:background="@drawable/web_custom"
+                app:backgroundTint="@null"
+                android:text="High Board"
+                android:textColor="@color/black" />
+            <Button
+                android:id="@+id/crew_android"
                 android:layout_width="150dp"
                 android:layout_height="40dp"
                 android:layout_marginLeft="5dp"
@@ -77,55 +86,88 @@
                 android:textColor="@color/black" />
 
             <Button
+                android:id="@+id/crew_flutter"
                 app:backgroundTint="@null"
                 android:layout_width="150dp"
                 android:layout_height="40dp"
                 android:text="Flutter"
                 android:background="@drawable/web_custom"
                 android:textColor="@color/black"
-                android:layout_marginLeft="30dp"/>
+                android:layout_marginLeft="5dp"/>
 
             <Button
+                android:id="@+id/crew_web"
                 app:backgroundTint="@null"
                 android:layout_width="150dp"
                 android:layout_height="40dp"
                 android:text="Web"
                 android:background="@drawable/color_train"
                 android:textColor="@color/cardview_dark_background"
-                android:layout_marginLeft="30dp"/>
+                android:layout_marginLeft="5dp"/>
 
             <Button
+                android:id="@+id/crew_game"
                 app:backgroundTint="@null"
                 android:layout_width="150dp"
                 android:layout_height="40dp"
                 android:text="Game"
                 android:background="@drawable/web_custom"
                 android:textColor="@color/cardview_dark_background"
-                android:layout_marginLeft="30dp"/>
+                android:layout_marginLeft="5dp"/>
             <Button
+                android:id="@+id/crew_data_science"
                 app:backgroundTint="@null"
                 android:layout_width="150dp"
                 android:layout_height="40dp"
                 android:text="Data Science"
                 android:background="@drawable/color_train"
                 android:textColor="@color/cardview_dark_background"
-                android:layout_marginLeft="30dp"/>
+                android:layout_marginLeft="5dp"/>
             <Button
+                android:id="@+id/crew_cyber"
                 app:backgroundTint="@null"
                 android:layout_width="150dp"
                 android:layout_height="40dp"
                 android:text="Cyber "
                 android:background="@drawable/web_custom"
                 android:textColor="@color/cardview_dark_background"
-                android:layout_marginLeft="30dp"/>
+                android:layout_marginLeft="5dp"/>
             <Button
+                android:id="@+id/crew_machine"
                 app:backgroundTint="@null"
                 android:layout_width="150dp"
                 android:layout_height="40dp"
                 android:text="Machine Learning"
                 android:background="@drawable/color_train"
                 android:textColor="@color/cardview_dark_background"
-                android:layout_marginLeft="30dp"/>
+                android:layout_marginLeft="5dp"/>
+            <Button
+                android:id="@+id/crew_hr"
+                app:backgroundTint="@null"
+                android:layout_width="150dp"
+                android:layout_height="40dp"
+                android:text="HR "
+                android:background="@drawable/web_custom"
+                android:textColor="@color/cardview_dark_background"
+                android:layout_marginLeft="5dp"/>
+            <Button
+                android:id="@+id/crew_pr"
+                app:backgroundTint="@null"
+                android:layout_width="150dp"
+                android:layout_height="40dp"
+                android:text="PR"
+                android:background="@drawable/color_train"
+                android:textColor="@color/cardview_dark_background"
+                android:layout_marginLeft="5dp"/>
+            <Button
+                android:id="@+id/crew_media"
+                app:backgroundTint="@null"
+                android:layout_width="150dp"
+                android:layout_height="40dp"
+                android:text="Media "
+                android:background="@drawable/web_custom"
+                android:textColor="@color/cardview_dark_background"
+                android:layout_marginLeft="5dp"/>
         </LinearLayout>
     </HorizontalScrollView>
 
