@@ -85,7 +85,7 @@ public class ProjectActivity extends AppCompatActivity implements ProjectAdapter
             @Override
             public void onChanged(ArrayList<ProjectsModel> projectsModels) {
                 if(projectsModels!=null) {
-                    progressBar_project.onVisibilityAggregated(false);
+                    progressBar_project.setVisibility(View.GONE);
                 }
                 projectAdapter.setProjects(projectsModels);
                 projectAdapter.setOnItemClickListner(ProjectActivity.this);

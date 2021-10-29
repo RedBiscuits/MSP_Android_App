@@ -135,7 +135,7 @@
                     android:text="We have a clear mission is to help the student in the campus and to be there for any kind of support needed whether it’s technical or non-technical and to help them to find suitable career ." android:paddingLeft="5dp"/>
             </androidx.cardview.widget.CardView>
             <androidx.cardview.widget.CardView
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="100dp"
                 android:layout_gravity="center_horizontal"
                 android:layout_margin="8dp"
@@ -235,7 +235,7 @@
                         android:layout_width="200dp"
                         android:layout_height="180dp"
                         app:cardCornerRadius="20dp"
-                        android:background="#F7F7F7"
+                        android:backgroundTint="#F7F7F7"
                         android:layout_marginLeft="8dp"
                         android:layout_marginRight="30dp"
                         android:layout_marginBottom="10dp"
@@ -273,7 +273,7 @@
                             android:layout_marginLeft="8dp"
                             android:layout_marginRight="30dp"
                             android:layout_marginBottom="10dp"
-                            android:background="#F7F7F7"
+                            android:backgroundTint="#F7F7F7"
                             app:cardCornerRadius="20dp">
 
                             <TextView
@@ -300,7 +300,7 @@
                         android:layout_width="200dp"
                         android:layout_height="180dp"
                         app:cardCornerRadius="20dp"
-                        android:background="#F7F7F7"
+                        android:backgroundTint="#F7F7F7"
                         android:layout_marginLeft="8dp"
                         android:layout_marginRight="30dp"
                         android:layout_marginBottom="10dp"
@@ -331,6 +331,8 @@
                         android:layout_marginLeft="8dp"
                         android:layout_marginRight="30dp"
                         android:layout_marginBottom="10dp"
+                        android:backgroundTint="#F7F7F7"
+
                         >
                         <TextView
                             android:layout_width="wrap_content"
@@ -354,7 +356,7 @@
                         android:layout_width="200dp"
                         android:layout_height="180dp"
                         app:cardCornerRadius="20dp"
-                        android:background="#F7F7F7"
+                        android:backgroundTint="#F7F7F7"
                         android:layout_marginLeft="8dp"
                         android:layout_marginRight="30dp"
                         android:layout_marginBottom="10dp"
@@ -385,7 +387,7 @@
                         android:layout_width="200dp"
                         android:layout_height="180dp"
                         app:cardCornerRadius="20dp"
-                        android:background="#F7F7F7"
+                        android:backgroundTint="#F7F7F7"
                         android:layout_marginLeft="8dp"
                         android:layout_marginRight="30dp"
                         android:layout_marginBottom="10dp"
@@ -415,6 +417,7 @@
                         app:cardCornerRadius="20dp"
                         android:layout_marginLeft="8dp"
                         android:layout_marginRight="30dp"
+                        android:backgroundTint="#F7F7F7"
                         android:layout_marginBottom="10dp"
                         >
                         <TextView
@@ -439,7 +442,7 @@
                         android:layout_width="200dp"
                         android:layout_height="180dp"
                         app:cardCornerRadius="20dp"
-                        android:background="#F7F7F7"
+                        android:backgroundTint="#F7F7F7"
                         android:layout_marginRight="30dp"
                         android:layout_marginBottom="10dp"
                         >
@@ -462,6 +465,7 @@
                     <androidx.cardview.widget.CardView
                         android:layout_width="200dp"
                         android:layout_height="180dp"
+                        android:backgroundTint="#F7F7F7"
                         app:cardCornerRadius="20dp"
                         android:layout_marginRight="30dp"
                         android:layout_marginBottom="10dp"

@@ -53,7 +53,7 @@ public class CrewAcivity extends AppCompatActivity {
             @Override
             public void onChanged(ArrayList<CrewModel> crewModels) {
                 if(crewModels!=null){
-                    crewProgress.onVisibilityAggregated(false);
+                    crewProgress.setVisibility(View.GONE);
                     crewAdapter.setMembersList(crewModels);
 
                 }

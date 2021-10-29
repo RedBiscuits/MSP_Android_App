@@ -4,6 +4,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 import com.example.msp_app.R;
 import androidx.annotation.NonNull;
@@ -70,12 +71,14 @@ public class EventAdapter extends RecyclerView.Adapter<EventAdapter.EventViewHol
     public class EventViewHolder extends RecyclerView.ViewHolder {
         ImageView eventImage;
         TextView title,discription,price,time;
+        ProgressBar progressBar;
         public EventViewHolder(@NonNull View itemView) {
             super(itemView);
             price=itemView.findViewById(R.id.event_price_txt);
             eventImage=itemView.findViewById(R.id.img_event);
             title=itemView.findViewById(R.id.event_name_txt);
             time=itemView.findViewById(R.id.event_time_txt);
+            progressBar=itemView.findViewById(R.id.progressBar_event);
             discription=itemView.findViewById(R.id.event_discription_txt);
 
             itemView.setOnClickListener(new View.OnClickListener() {

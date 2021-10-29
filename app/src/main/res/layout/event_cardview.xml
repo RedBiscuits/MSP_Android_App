@@ -26,7 +26,7 @@
             android:src="@drawable/project_logo" />
     </LinearLayout>
     <androidx.cardview.widget.CardView
-        android:layout_width="320dp"
+        android:layout_width="match_parent"
         android:layout_height="170dp"
         app:backgroundTint="@null"
         app:cardBackgroundColor="#617C79"
@@ -77,8 +77,8 @@
                 android:id="@+id/event_price_txt"
                 android:layout_width="60dp"
                 android:layout_height="60dp"
-                android:layout_marginLeft="240dp"
-                android:layout_marginTop="30dp"
+                android:layout_marginLeft="260dp"
+                android:layout_marginTop="70dp"
                 android:background="@drawable/round"
                 android:gravity="center"
                 android:text="30h"

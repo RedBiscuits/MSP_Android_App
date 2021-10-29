@@ -13,6 +13,7 @@ import android.view.animation.AnimationUtils;
 import android.widget.Filter;
 import android.widget.Filterable;
 import android.widget.ImageView;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.RequiresApi;
@@ -65,6 +66,7 @@ public class CrewAdapter extends RecyclerView.Adapter
     @Override
     public void onBindViewHolder(@NonNull MemberViewHolder holder, int position) {
         holder.onBind(getMembersList().get(position));
+
     }
 
     @Override
@@ -76,7 +78,8 @@ public class CrewAdapter extends RecyclerView.Adapter
     {
 
         private TextView txtName,txtPosition,txtCommunity;
-        private Animation animation,anim;
+        private Animation animation;
+        ProgressBar progressBar;
         ImageView img_memeber;
         public MemberViewHolder(@NonNull View itemView) {
             super(itemView);
@@ -88,6 +91,8 @@ public class CrewAdapter extends RecyclerView.Adapter
             txtCommunity=itemView.findViewById(R.id.txt_community);
             txtCommunity.setAnimation(animation);
            img_memeber=itemView.findViewById(R.id.img_member);
+           progressBar=itemView.findViewById(R.id.progressBar_crew);
+
 
         }
 
@@ -99,16 +104,10 @@ public class CrewAdapter extends RecyclerView.Adapter
             txtCommunity.setText(member.getCommittee());
             Picasso.get().load(member.getImg()).error(R.drawable.admin).into(img_memeber);
 
+
         }
 
-      /*  @RequiresApi(api = Build.VERSION_CODES.O)
-        public void convertImageType(String imgUrl){
-            //decode base64 string to image
-            byte[] decodeString= Base64.getDecoder().decode(imgUrl);
-            Bitmap decoded=BitmapFactory.decodeByteArray(decodeString,0,decodeString.length);
-            img_memeber.setImageBitmap(decoded);
 
-        }*/
     }
 
     @Override

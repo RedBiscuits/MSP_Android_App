@@ -37,6 +37,7 @@ public class EventActivity extends AppCompatActivity implements EventAdapter.OnI
         setContentView(R.layout.activity_event);
         getSupportActionBar().hide();
 
+
         progressBar_event=findViewById(R.id.progressBar_event);
 
         transferEventDataIntent=new Intent();
@@ -52,7 +53,7 @@ public class EventActivity extends AppCompatActivity implements EventAdapter.OnI
         dataViewModel.eventMutableLiveData.observe(this, new Observer<ArrayList<EventsModel>>() {
             @Override
             public void onChanged(ArrayList<EventsModel> eventsModels) {
-                progressBar_event.onVisibilityAggregated(false);
+                progressBar_event.setVisibility(View.GONE);
                 eventAdapter.setEvents(eventsModels);
                 events=eventsModels;
                 eventAdapter.setOnItemClickListner(EventActivity.this);

@@ -7,6 +7,7 @@ import android.view.ViewGroup;
 import android.widget.Filter;
 import android.widget.Filterable;
 import android.widget.ImageView;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -84,12 +85,14 @@ public class ProjectAdapter extends RecyclerView.Adapter<ProjectAdapter.ProjectH
     public class ProjectHolder  extends  RecyclerView.ViewHolder{
         TextView ProjectName,Discrption,time;
         ImageView ProjectImage;
+        ProgressBar progressBar;
         public ProjectHolder(@NonNull View itemView) {
             super(itemView);
             ProjectName=itemView.findViewById(R.id.ProjectName);
             Discrption=itemView.findViewById(R.id.content);
             time=itemView.findViewById(R.id.time_discription2_txt);
             ProjectImage=itemView.findViewById(R.id.Projectimage);
+            progressBar=itemView.findViewById(R.id.progressBar_project);
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
