@@ -28,7 +28,7 @@
             android:name=".ui.crew.CrewAcivity"
             android:exported="true" />
         <activity
-            android:name=".ui.home.HomeAcivity"
+            android:name=".ui.home.HomeActivity"
             android:exported="true" />
         <activity
             android:name=".ui.intro.IntroActivity"

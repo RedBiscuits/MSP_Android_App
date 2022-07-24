@@ -9,11 +9,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.msp_app.R;
-import com.example.msp_app.model.EventsModel;
-import com.example.msp_app.ui.home.HomeAcivity;
 import com.squareup.picasso.Picasso;
-
-import java.util.ArrayList;
 
 public class EventDescription extends AppCompatActivity {
     Intent eventData;

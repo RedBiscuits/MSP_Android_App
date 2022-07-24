@@ -20,7 +20,7 @@ import android.widget.SearchView;
 
 import com.example.msp_app.R;
 import com.example.msp_app.model.ProjectsModel;
-import com.example.msp_app.ui.home.HomeAcivity;
+import com.example.msp_app.ui.home.HomeActivity;
 import com.example.msp_app.ui.main.DataViewModel;
 
 import java.util.ArrayList;
@@ -95,7 +95,7 @@ public class ProjectActivity extends AppCompatActivity implements ProjectAdapter
         projectBack.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent i=new Intent(getApplicationContext(), HomeAcivity.class);
+                Intent i=new Intent(getApplicationContext(), HomeActivity.class);
                 startActivity(i);
             }
         });

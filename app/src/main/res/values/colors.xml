@@ -21,4 +21,11 @@
     <color name="crew_yellow">#FFC300</color>
     <color name="crew_yelloow">#F8C471</color>
 
+
+    <color name="msp_blue">#0183f1</color>
+    <color name="msp_dark_blue">#00004b</color>
+    <color name="msp_green">#7fba00</color>
+    <color name="msp_orange">#f25123</color>
+    <color name="primary">#121212</color>
+    <color name="on_primary">#ffffff</color>
 </resources>

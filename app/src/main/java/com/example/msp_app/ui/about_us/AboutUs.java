@@ -9,7 +9,7 @@ import android.view.View;
 import android.widget.ImageView;
 
 import com.example.msp_app.R;
-import com.example.msp_app.ui.home.HomeAcivity;
+import com.example.msp_app.ui.home.HomeActivity;
 
 public class AboutUs extends AppCompatActivity {
 
@@ -59,7 +59,7 @@ public class AboutUs extends AppCompatActivity {
         back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent i=new Intent(getApplicationContext(), HomeAcivity.class);
+                Intent i=new Intent(getApplicationContext(), HomeActivity.class);
                 startActivity(i);
             }
         });

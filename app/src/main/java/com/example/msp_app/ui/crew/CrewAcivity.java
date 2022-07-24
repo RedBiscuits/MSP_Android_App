@@ -8,7 +8,6 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Context;
 import android.content.Intent;
-import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
 import android.view.animation.AnimationUtils;
@@ -19,7 +18,7 @@ import android.widget.ProgressBar;
 
 import com.example.msp_app.R;
 import com.example.msp_app.model.CrewModel;
-import com.example.msp_app.ui.home.HomeAcivity;
+import com.example.msp_app.ui.home.HomeActivity;
 import com.example.msp_app.ui.main.DataViewModel;
 
 import java.util.ArrayList;
@@ -78,7 +77,7 @@ public class CrewAcivity extends AppCompatActivity {
         back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent i=new Intent(getApplicationContext(),HomeAcivity.class);
+                Intent i=new Intent(getApplicationContext(), HomeActivity.class);
                 startActivity(i);
             }
         });

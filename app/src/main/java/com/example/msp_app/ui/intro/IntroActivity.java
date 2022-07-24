@@ -16,7 +16,7 @@ import android.widget.TextView;
 
 import com.example.msp_app.R;
 import com.example.msp_app.model.ScreenIntroModel;
-import com.example.msp_app.ui.home.HomeAcivity;
+import com.example.msp_app.ui.home.HomeActivity;
 import com.example.msp_app.ui.main.MainActivity;
 import com.google.android.material.tabs.TabLayout;
 
@@ -142,7 +142,7 @@ public class IntroActivity extends AppCompatActivity {
 
                 //open main activity
 
-                Intent mainActivity = new Intent(getApplicationContext(), HomeAcivity.class);
+                Intent mainActivity = new Intent(getApplicationContext(), HomeActivity.class);
                 startActivity(mainActivity);
                 savePrefsData();
                 finish();

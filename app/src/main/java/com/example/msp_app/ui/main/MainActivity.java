@@ -1,7 +1,5 @@
 package com.example.msp_app.ui.main;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.lifecycle.Observer;
-import androidx.lifecycle.ViewModelProviders;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -9,13 +7,8 @@ import android.os.Bundle;
 import android.view.WindowManager;
 
 import com.example.msp_app.R;
-import com.example.msp_app.model.CrewModel;
-import com.example.msp_app.model.EventsModel;
-import com.example.msp_app.model.ProjectsModel;
-import com.example.msp_app.ui.home.HomeAcivity;
+import com.example.msp_app.ui.home.HomeActivity;
 import com.example.msp_app.ui.intro.IntroActivity;
-
-import java.util.ArrayList;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -36,7 +29,7 @@ public class MainActivity extends AppCompatActivity {
                     sleep(2000);
 
                     if(restorePrefData()) {
-                        Intent i = new Intent(getApplicationContext(), HomeAcivity.class);
+                        Intent i = new Intent(getApplicationContext(), HomeActivity.class);
                         startActivity(i);
                         finish();
                     }else{
