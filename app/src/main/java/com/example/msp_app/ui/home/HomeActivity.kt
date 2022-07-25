@@ -8,26 +8,21 @@ import com.example.msp_app.R
 import com.example.msp_app.databinding.ActivityHomeBinding
 
 class HomeActivity : AppCompatActivity() {
+
     //BottomNavigationView bottomNavigationView;
-    var crewBtn: CardView? = null
-    var eventBtn: CardView? = null
-    var projectBtn: CardView? = null
-    var aboutUsBtn: CardView? = null
     val faceBookUri = "https://www.facebook.com/ASUTC"
     val youtubeUri = "https://www.youtube.com/channel/UCx4RR5PPCwfU_Om_9pAwaCA/featured"
     val linedInUri = "https://www.linkedin.com/company/msp-tech-club-asu/"
+
     private val binding: ActivityHomeBinding by lazy {
         ActivityHomeBinding.inflate(layoutInflater)
     }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
         supportActionBar!!.hide()
 
-
-        if (savedInstanceState == null) {
-            binding.bottomNavigation.selectedItemId = R.id.page_2; // change to whichever id should be default
-        }
 
         binding.bottomNavigation.setOnNavigationItemSelectedListener() { item ->
             when(item.itemId) {
@@ -36,6 +31,7 @@ class HomeActivity : AppCompatActivity() {
                     true
                 }
                 R.id.page_2 -> {
+                    loadMainFragment()
                     Toast.makeText(this , "hello from 2" , Toast.LENGTH_LONG).show()
                     true
                 }
@@ -47,5 +43,16 @@ class HomeActivity : AppCompatActivity() {
                 else -> false
             }
         }
+        if (savedInstanceState == null) {
+            binding.bottomNavigation.selectedItemId = R.id.page_2; // change to whichever id should be default
+        }
+
+    }
+
+    private fun loadMainFragment() {
+        val transaction = supportFragmentManager.beginTransaction()
+        transaction.replace(R.id.fragment_container_view, Committees())
+        transaction.addToBackStack(null)
+        transaction.commit()
     }
 }

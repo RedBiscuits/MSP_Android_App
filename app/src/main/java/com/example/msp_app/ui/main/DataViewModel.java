@@ -18,7 +18,7 @@ import retrofit2.Response;
 
 public class DataViewModel extends ViewModel {
       public MutableLiveData<ArrayList<CrewModel>>crewMutableLiveData=new MutableLiveData<>();
-     public MutableLiveData<ArrayList<ProjectsModel>>projectMutableLiveData=new MutableLiveData<>();
+      public MutableLiveData<ArrayList<ProjectsModel>>projectMutableLiveData=new MutableLiveData<>();
       public MutableLiveData<ArrayList<EventsModel>>eventMutableLiveData=new MutableLiveData<>();
 
       public void getCrew(){
