@@ -1,5 +1,6 @@
 package com.example.msp_app.ui.home
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import androidx.cardview.widget.CardView
 import android.os.Bundle
@@ -27,7 +28,7 @@ class HomeActivity : AppCompatActivity() {
         binding.bottomNavigation.setOnNavigationItemSelectedListener() { item ->
             when(item.itemId) {
                 R.id.page_1 -> {
-                    Toast.makeText(this , "hello from 1" , Toast.LENGTH_LONG).show()
+
                     true
                 }
                 R.id.page_2 -> {

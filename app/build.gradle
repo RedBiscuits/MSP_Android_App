@@ -83,4 +83,7 @@ dependencies {
     //Auto image slider
     implementation 'com.github.smarteist:autoimageslider:1.4.0'
 
+    //staggered grid view
+    implementation 'com.etsy.android.grid:library:1.0.5'
+
 }

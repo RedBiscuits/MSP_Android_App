@@ -5,10 +5,11 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
+import com.bumptech.glide.Glide
 import com.example.msp_app.R
 import com.smarteist.autoimageslider.SliderViewAdapter
 
-class ImageSliderAdapter(private var images: ArrayList<Int>) : SliderViewAdapter<ImageSliderAdapter.Holder>() {
+class ImageSliderAdapter(private var images: ArrayList<String>) : SliderViewAdapter<ImageSliderAdapter.Holder>() {
     override fun getCount(): Int {
         return images.size
     }
@@ -20,17 +21,11 @@ class ImageSliderAdapter(private var images: ArrayList<Int>) : SliderViewAdapter
 
     override fun onBindViewHolder(viewHolder: Holder?, position: Int) {
         val current = images[position]
-        viewHolder!!.image_view.setImageResource(current)
-        Log.d("meow" , current.toString())
-
+        Glide.with(viewHolder!!.itemView).load(current).into(viewHolder.imageView)
     }
 
     class Holder(ItemView: View) : SliderViewAdapter.ViewHolder(ItemView) {
-        lateinit var image_view: ImageView;
-
-        init {
-            image_view =  itemView.findViewById(R.id.image_view)
-        }
+        var imageView: ImageView = itemView.findViewById(R.id.image_view);
 
     }
 }

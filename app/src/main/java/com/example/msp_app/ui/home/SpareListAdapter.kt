@@ -1,7 +1,7 @@
 package com.example.msp_app.ui.home
 
 import androidx.recyclerview.widget.RecyclerView
-import com.example.msp_app.ui.home.TrendingListAdapter.TrendingViewHolder
+import com.example.msp_app.ui.home.SpareListAdapter.TrendingViewHolder
 import com.example.msp_app.model.Events_Model
 import com.bumptech.glide.request.RequestOptions
 import com.example.msp_app.R
@@ -13,7 +13,7 @@ import com.bumptech.glide.Glide
 import android.widget.TextView
 import java.util.ArrayList
 
-class TrendingListAdapter : RecyclerView.Adapter<TrendingViewHolder>() {
+class SpareListAdapter : RecyclerView.Adapter<TrendingViewHolder>() {
     private var events_list = ArrayList<Events_Model>()
     private var options = RequestOptions()
         .centerCrop()
@@ -24,7 +24,7 @@ class TrendingListAdapter : RecyclerView.Adapter<TrendingViewHolder>() {
         return TrendingViewHolder(
             LayoutInflater
                 .from(parent.context)
-                .inflate(R.layout.trending_item_card, parent, false)
+                .inflate(R.layout.spare_item_card, parent, false)
         )
     }
 

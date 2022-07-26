@@ -10,6 +10,18 @@
     android:background="@drawable/recshape"
     >
 
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Trending"
+        android:layout_marginStart="@dimen/_6sdp"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_14ssp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
 
     <com.smarteist.autoimageslider.SliderView
         android:id="@+id/imageSlider"
@@ -17,7 +29,7 @@
         android:layout_height="@dimen/_140sdp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2"
         app:sliderAnimationDuration="200"
         app:sliderAutoCycleDirection="right"
         app:sliderAutoCycleEnabled="true"
@@ -25,5 +37,42 @@
         app:sliderIndicatorUnselectedColor="@color/msp_blue"
         app:sliderScrollTimeInSec="2"
         app:sliderStartAutoCycle="true" />
+
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_6sdp"
+        android:text="Communities"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_14ssp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageSlider" />
+
+
+    <com.etsy.android.grid.StaggeredGridView
+        android:id="@+id/grid_view"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:column_count="2"
+        app:item_margin="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView3" />
+<!--    <androidx.recyclerview.widget.RecyclerView-->
+<!--        android:id="@+id/communities_RV"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="0dp"-->
+<!--        android:paddingVertical="@dimen/_10sdp"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/textView3" />-->
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
