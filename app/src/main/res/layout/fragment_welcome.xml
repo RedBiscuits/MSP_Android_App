@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/rounded_background"
+    tools:context=".ui.login.fragments.WelcomeFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/enjoyText"
+            android:layout_width="@dimen/_250sdp"
+            android:layout_height="@dimen/_25sdp"
+            android:layout_gravity="center|center_horizontal|fill_horizontal|center_vertical|fill_vertical"
+            android:layout_marginTop="@dimen/_14sdp"
+            android:gravity="center"
+            android:text="Enjoy our Community"
+            android:textAlignment="center"
+            android:textColor="#FFFFFF"
+            android:textSize="@dimen/_16ssp"
+            android:textStyle="italic"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.607"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/welcomeText"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <TextView
+            android:id="@+id/welcomeText"
+            android:layout_width="@dimen/_250sdp"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_gravity="center|center_horizontal|fill_horizontal|center_vertical|fill_vertical"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:elegantTextHeight="false"
+            android:gravity="center"
+            android:text="Welcome to MSP app"
+            android:textAlignment="center"
+            android:textColor="#FFFFFF"
+            android:textSize="@dimen/_23ssp"
+            android:textStyle="bold|italic"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.64"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>

@@ -9,6 +9,7 @@ import android.view.WindowManager;
 import com.example.msp_app.R;
 import com.example.msp_app.ui.home.HomeActivity;
 import com.example.msp_app.ui.intro.IntroActivity;
+import com.example.msp_app.ui.login.LoginActivity;
 
 
 public class MainActivity extends AppCompatActivity {

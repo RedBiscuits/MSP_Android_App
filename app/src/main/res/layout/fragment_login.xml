@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/rounded_background"
+    tools:context=".ui.login.fragments.LoginFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/welcomeText"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_43sdp"
+            android:layout_gravity="center|center_horizontal|fill_horizontal|center_vertical|fill_vertical"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:elegantTextHeight="false"
+            android:text="Welcome to MSP app"
+            android:textAlignment="center"
+            android:textColor="#FFFFFF"
+            android:textSize="@dimen/_23sdp"
+            android:textStyle="bold|italic"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/enjoyText"
+            android:layout_width="@dimen/_207sdp"
+            android:layout_height="@dimen/_18sdp"
+            android:layout_gravity="center|center_horizontal|fill_horizontal|center_vertical|fill_vertical"
+            android:text="Enjoy our Community"
+            android:textAlignment="center"
+            android:textColor="#FFFFFF"
+            android:textSize="@dimen/_16sdp"
+            android:textStyle="italic"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/welcomeText" />
+
+        <EditText
+            android:id="@+id/userName"
+            android:layout_width="@dimen/_280sdp"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_marginTop="@dimen/_29sdp"
+            android:background="@drawable/text_container"
+            android:drawableLeft="@drawable/ic_baseline_account_circle_24"
+            android:gravity="center|left"
+            android:hint=" Username"
+            android:inputType="text|textPersonName"
+            android:paddingHorizontal="@dimen/_10sdp"
+            android:textColorHint="@color/black"
+            android:textSize="@dimen/_15ssp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.489"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/enjoyText" />
+
+        <EditText
+            android:id="@+id/password"
+            android:layout_width="@dimen/_280sdp"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:background="@drawable/text_container"
+            android:drawableLeft="@drawable/ic_baseline_lock_open_24"
+            android:ems="10"
+            android:gravity="center|left"
+            android:hint=" Password"
+            android:inputType="textPassword"
+            android:paddingHorizontal="@dimen/_10sdp"
+            android:textColorHint="@color/black"
+            android:textSize="@dimen/_15ssp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.489"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/userName" />
+
+        <Button
+            android:id="@+id/loginBtn"
+            android:layout_width="@dimen/_216sdp"
+            android:layout_height="@dimen/_52sdp"
+            android:layout_marginTop="@dimen/_9sdp"
+            android:backgroundTint="@color/logo_blue"
+            android:text="Log In"
+            android:textColor="#FFFFFF"
+            android:textSize="@dimen/_13ssp"
+            app:cornerRadius="@dimen/_125sdp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/password" />
+
+        <TextView
+            android:id="@+id/forgotPass"
+            android:layout_width="@dimen/_118sdp"
+            android:layout_height="@dimen/_24sdp"
+            android:layout_marginTop="@dimen/_12sdp"
+            android:gravity="center"
+            android:text="Forgot Password?"
+            android:textColor="@color/logo_blue"
+            android:textColorHighlight="@color/app_background"
+            android:textSize="@dimen/_12ssp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/loginBtn"
+            app:layout_constraintVertical_bias="0.0" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>

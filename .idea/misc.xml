@@ -3,6 +3,55 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Android Projects/MSP_Android_App_Members/app/src/main/res/drawable-v24/color_train2.xml" value="0.1795" />
+        <entry key="..\:/Android Projects/MSP_Android_App_Members/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.1795" />
+        <entry key="..\:/Android Projects/MSP_Android_App_Members/app/src/main/res/drawable/back.xml" value="0.1795" />
+        <entry key="..\:/Android Projects/MSP_Android_App_Members/app/src/main/res/drawable/btn_gradient_style.xml" value="0.1795" />
+        <entry key="..\:/Android Projects/MSP_Android_App_Members/app/src/main/res/drawable/button.xml" value="0.1795" />
+        <entry key="..\:/Android Projects/MSP_Android_App_Members/app/src/main/res/drawable/color_train.xml" value="0.1795" />
+        <entry key="..\:/Android Projects/MSP_Android_App_Members/app/src/main/res/drawable/ic_baseline_account_circle_24.xml" value="0.249" />
+        <entry key="..\:/Android Projects/MSP_Android_App_Members/app/src/main/res/drawable/ic_baseline_arrow_forward_24.xml" value="0.1795" />
+        <entry key="..\:/Android Projects/MSP_Android_App_Members/app/src/main/res/drawable/ic_baseline_lock_open_24.xml" value="0.1795" />
+        <entry key="..\:/Android Projects/MSP_Android_App_Members/app/src/main/res/drawable/ic_baseline_vpn_key_24.xml" value="0.249" />
+        <entry key="..\:/Android Projects/MSP_Android_App_Members/app/src/main/res/drawable/ic_close.xml" value="0.1795" />
+        <entry key="..\:/Android Projects/MSP_Android_App_Members/app/src/main/res/drawable/ic_committee.xml" value="0.1795" />
+        <entry key="..\:/Android Projects/MSP_Android_App_Members/app/src/main/res/drawable/ic_event.xml" value="0.1795" />
+        <entry key="..\:/Android Projects/MSP_Android_App_Members/app/src/main/res/drawable/ic_group.xml" value="0.1795" />
+        <entry key="..\:/Android Projects/MSP_Android_App_Members/app/src/main/res/drawable/ic_home.xml" value="0.1795" />
+        <entry key="..\:/Android Projects/MSP_Android_App_Members/app/src/main/res/drawable/ic_link.xml" value="0.1795" />
+        <entry key="..\:/Android Projects/MSP_Android_App_Members/app/src/main/res/drawable/ic_location.xml" value="0.1795" />
+        <entry key="..\:/Android Projects/MSP_Android_App_Members/app/src/main/res/drawable/ic_person.xml" value="0.1795" />
+        <entry key="..\:/Android Projects/MSP_Android_App_Members/app/src/main/res/drawable/ic_recrutment.xml" value="0.1795" />
+        <entry key="..\:/Android Projects/MSP_Android_App_Members/app/src/main/res/drawable/imageradious.xml" value="0.1795" />
+        <entry key="..\:/Android Projects/MSP_Android_App_Members/app/src/main/res/drawable/indicator_default.xml" value="0.1795" />
+        <entry key="..\:/Android Projects/MSP_Android_App_Members/app/src/main/res/drawable/indicator_selected.xml" value="0.1795" />
+        <entry key="..\:/Android Projects/MSP_Android_App_Members/app/src/main/res/drawable/indicator_selector.xml" value="0.1795" />
+        <entry key="..\:/Android Projects/MSP_Android_App_Members/app/src/main/res/drawable/p.xml" value="0.1795" />
+        <entry key="..\:/Android Projects/MSP_Android_App_Members/app/src/main/res/drawable/round.xml" value="0.1795" />
+        <entry key="..\:/Android Projects/MSP_Android_App_Members/app/src/main/res/drawable/rounded_background.xml" value="0.1795" />
+        <entry key="..\:/Android Projects/MSP_Android_App_Members/app/src/main/res/drawable/rounded_background_land.xml" value="0.249" />
+        <entry key="..\:/Android Projects/MSP_Android_App_Members/app/src/main/res/drawable/text_container.xml" value="0.122" />
+        <entry key="..\:/Android Projects/MSP_Android_App_Members/app/src/main/res/drawable/web_custom.xml" value="0.249" />
+        <entry key="..\:/Android Projects/MSP_Android_App_Members/app/src/main/res/layout-land/activity_login.xml" value="0.23236331569664903" />
+        <entry key="..\:/Android Projects/MSP_Android_App_Members/app/src/main/res/layout/activity_about_us.xml" value="0.1265625" />
+        <entry key="..\:/Android Projects/MSP_Android_App_Members/app/src/main/res/layout/activity_crew.xml" value="0.1265625" />
+        <entry key="..\:/Android Projects/MSP_Android_App_Members/app/src/main/res/layout/activity_home.xml" value="0.2694746376811594" />
+        <entry key="..\:/Android Projects/MSP_Android_App_Members/app/src/main/res/layout/activity_intro.xml" value="0.1334853090172239" />
+        <entry key="..\:/Android Projects/MSP_Android_App_Members/app/src/main/res/layout/activity_login.xml" value="0.12037037037037036" />
+        <entry key="..\:/Android Projects/MSP_Android_App_Members/app/src/main/res/layout/activity_main.xml" value="0.1334853090172239" />
+        <entry key="..\:/Android Projects/MSP_Android_App_Members/app/src/main/res/layout/activity_project.xml" value="0.27447916666666666" />
+        <entry key="..\:/Android Projects/MSP_Android_App_Members/app/src/main/res/layout/crew_cardview.xml" value="0.1334853090172239" />
+        <entry key="..\:/Android Projects/MSP_Android_App_Members/app/src/main/res/layout/event_cardview.xml" value="0.1334853090172239" />
+        <entry key="..\:/Android Projects/MSP_Android_App_Members/app/src/main/res/layout/fragment_blank.xml" value="0.1" />
+        <entry key="..\:/Android Projects/MSP_Android_App_Members/app/src/main/res/layout/fragment_committees.xml" value="0.1" />
+        <entry key="..\:/Android Projects/MSP_Android_App_Members/app/src/main/res/layout/fragment_forgot_password.xml" value="0.264" />
+        <entry key="..\:/Android Projects/MSP_Android_App_Members/app/src/main/res/layout/fragment_login.xml" value="0.42025518341307816" />
+        <entry key="..\:/Android Projects/MSP_Android_App_Members/app/src/main/res/layout/fragment_welcome.xml" value="0.20806890299184044" />
+        <entry key="..\:/Android Projects/MSP_Android_App_Members/app/src/main/res/layout/intro_sreen.xml" value="0.1334853090172239" />
+        <entry key="..\:/Android Projects/MSP_Android_App_Members/app/src/main/res/layout/rounded_background.xml" value="0.14356884057971014" />
+        <entry key="..\:/Android Projects/MSP_Android_App_Members/app/src/main/res/layout/slider_item.xml" value="0.1334853090172239" />
+        <entry key="..\:/Android Projects/MSP_Android_App_Members/app/src/main/res/layout/spare_item_card.xml" value="0.1334853090172239" />
+        <entry key="..\:/Android Projects/MSP_Android_App_Members/app/src/main/res/layout/staggered_recycler_row.xml" value="0.1334853090172239" />
         <entry key="..\:/AndroidStudioProjects/MSP_APP/app/src/main/res/drawable-v24/color_train2.xml" value="0.2203125" />
         <entry key="..\:/AndroidStudioProjects/MSP_APP/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.1125" />
         <entry key="..\:/AndroidStudioProjects/MSP_APP/app/src/main/res/drawable/back.xml" value="0.2203125" />
