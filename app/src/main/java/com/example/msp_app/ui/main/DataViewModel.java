@@ -7,6 +7,7 @@ import androidx.lifecycle.ViewModel;
 
 import com.example.msp_app.data.DataClient;
 import com.example.msp_app.model.CrewModel;
+import com.example.msp_app.model.EventModel;
 import com.example.msp_app.model.EventsModel;
 import com.example.msp_app.model.ProjectsModel;
 
@@ -19,7 +20,7 @@ import retrofit2.Response;
 public class DataViewModel extends ViewModel {
       public MutableLiveData<ArrayList<CrewModel>>crewMutableLiveData=new MutableLiveData<>();
       public MutableLiveData<ArrayList<ProjectsModel>>projectMutableLiveData=new MutableLiveData<>();
-      public MutableLiveData<ArrayList<EventsModel>>eventMutableLiveData=new MutableLiveData<>();
+      public MutableLiveData<ArrayList<EventModel>>eventMutableLiveData=new MutableLiveData<>();
 
       public void getCrew(){
             DataClient.getDataInstance().getCrew().enqueue(new Callback<ArrayList<CrewModel>>() {
@@ -52,14 +53,14 @@ public class DataViewModel extends ViewModel {
 
       public void getEvents(){
 
-            DataClient.getDataInstance().getEvents().enqueue(new Callback<ArrayList<EventsModel>>() {
+            DataClient.getDataInstance().getEvents().enqueue(new Callback<ArrayList<EventModel>>() {
                   @Override
-                  public void onResponse(Call<ArrayList<EventsModel>> call, Response<ArrayList<EventsModel>> response) {
+                  public void onResponse(Call<ArrayList<EventModel>> call, Response<ArrayList<EventModel>> response) {
                       eventMutableLiveData.setValue(response.body());
                   }
 
                   @Override
-                  public void onFailure(Call<ArrayList<EventsModel>> call, Throwable t) {
+                  public void onFailure(Call<ArrayList<EventModel>> call, Throwable t) {
 
                   }
             });

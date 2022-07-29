@@ -73,7 +73,7 @@ public class IntroActivity extends AppCompatActivity {
         final List<ScreenIntroModel> mList = new ArrayList<>();
         mList.add(new ScreenIntroModel("MSP Tech Club ","Microsoft Student Tech Club at ASU , Is a student community program that promotes advanced technology through education , practice and innovation , It also provides Students with both technical and non-technical sessions , Which is pacing their lives with high level of skills  ",R.drawable.crew3));
         mList.add(new ScreenIntroModel("Projects","MSP Tech Club is always keen to make the necessary effort ,  to obtain a bright fruit of success, which makes her always distinguished among student activities , This appears greatly on the various projects, in which students from different departments participate, which gives a good impression of this work",R.drawable.project2));
-        mList.add(new ScreenIntroModel("Events","MSP organises many events , where students can participate , These events help the students to discover their talents , It is always a happy and memorable moment to participate in these events.   ",R.drawable.event));
+        mList.add(new ScreenIntroModel("Events1","MSP organises many events , where students can participate , These events help the students to discover their talents , It is always a happy and memorable moment to participate in these events.   ",R.drawable.event));
 
         // setup viewpager
         introScreenPager =findViewById(R.id.screen_viewpager);

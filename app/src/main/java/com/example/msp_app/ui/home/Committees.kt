@@ -66,11 +66,10 @@ class Committees : Fragment(R.layout.fragment_committees),
     }
 
 
-private fun generateData(): java.util.ArrayList<String> {
-    val listData = ArrayList<String>()
+    private fun generateData(): java.util.ArrayList<String> {
 
-    return listData
-}
+        return ArrayList()
+    }
 
 
 override fun onItemClick(adapterView: AdapterView<*>?, view: View?, position: Int, id: Long) {

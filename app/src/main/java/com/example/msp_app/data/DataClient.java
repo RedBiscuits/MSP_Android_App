@@ -1,7 +1,7 @@
 package com.example.msp_app.data;
 
 import com.example.msp_app.model.CrewModel;
-import com.example.msp_app.model.EventsModel;
+import com.example.msp_app.model.EventModel;
 import com.example.msp_app.model.ProjectsModel;
 
 import java.util.ArrayList;
@@ -11,7 +11,7 @@ import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
 public class DataClient {
-    public static final String BASE_URL="https://mspapi.herokuapp.com/search/";
+    public static final String BASE_URL="https://msp-backend-test.herokuapp.com/api/v1/";
     DataInterface crewInterface;
     private static DataClient DataInstance;
 
@@ -20,7 +20,6 @@ public class DataClient {
         Retrofit retrofit=new Retrofit.Builder()
                  .baseUrl(BASE_URL)
                  .addConverterFactory(GsonConverterFactory.create()).build();
-
              crewInterface=retrofit.create(DataInterface.class);
     }
 
@@ -39,7 +38,7 @@ public class DataClient {
     public Call<ArrayList<ProjectsModel>> getProjects(){
         return crewInterface.getProjectsData();
     }
-    public Call<ArrayList<EventsModel>> getEvents(){
+    public Call<ArrayList<EventModel>> getEvents(){
         return crewInterface.getEventsData();
     }
 }

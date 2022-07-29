@@ -70,6 +70,21 @@
         <entry key="..\:/Users/Joo/AndroidStudioProjects/MSP_Android_App/app/src/main/res/layout/trending_item_card.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/Joo/AndroidStudioProjects/MSP_Android_App/app/src/main/res/menu/bottom_nav.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/Joo/AndroidStudioProjects/MSP_Android_App/app/src/main/res/menu/bottom_navigation_menu.xml" value="0.2484375" />
+        <entry key="..\:/github/MSP_Android_App/app/src/main/res/drawable/dark_gd.xml" value="0.219" />
+        <entry key="..\:/github/MSP_Android_App/app/src/main/res/layout/activity_event.xml" value="0.4" />
+        <entry key="..\:/github/MSP_Android_App/app/src/main/res/layout/activity_event_description.xml" value="0.264" />
+        <entry key="..\:/github/MSP_Android_App/app/src/main/res/layout/activity_events.xml" value="0.264" />
+        <entry key="..\:/github/MSP_Android_App/app/src/main/res/layout/activity_home.xml" value="0.24728260869565216" />
+        <entry key="..\:/github/MSP_Android_App/app/src/main/res/layout/activity_intro.xml" value="0.24728260869565216" />
+        <entry key="..\:/github/MSP_Android_App/app/src/main/res/layout/activity_main.xml" value="0.24728260869565216" />
+        <entry key="..\:/github/MSP_Android_App/app/src/main/res/layout/event_item.xml" value="0.176" />
+        <entry key="..\:/github/MSP_Android_App/app/src/main/res/layout/fragment_committees.xml" value="0.24728260869565216" />
+        <entry key="..\:/github/MSP_Android_App/app/src/main/res/layout/fragment_event.xml" value="0.2359375" />
+        <entry key="..\:/github/MSP_Android_App/app/src/main/res/layout/fragment_events.xml" value="0.2359375" />
+        <entry key="..\:/github/MSP_Android_App/app/src/main/res/layout/project_cardview.xml" value="0.24728260869565216" />
+        <entry key="..\:/github/MSP_Android_App/app/src/main/res/layout/slider_item.xml" value="0.24728260869565216" />
+        <entry key="..\:/github/MSP_Android_App/app/src/main/res/layout/staggered_recycler_row.xml" value="0.24728260869565216" />
+        <entry key="..\:/github/MSP_Android_App/app/src/main/res/menu/bottom_navigation_menu.xml" value="0.25" />
       </map>
     </option>
   </component>

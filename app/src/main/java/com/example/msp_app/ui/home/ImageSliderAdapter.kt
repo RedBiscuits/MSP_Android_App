@@ -10,6 +10,10 @@ import com.example.msp_app.R
 import com.smarteist.autoimageslider.SliderViewAdapter
 
 class ImageSliderAdapter(private var images: ArrayList<String>) : SliderViewAdapter<ImageSliderAdapter.Holder>() {
+    class Holder(ItemView: View) : SliderViewAdapter.ViewHolder(ItemView) {
+        var imageView: ImageView = itemView.findViewById(R.id.image_view);
+    }
+
     override fun getCount(): Int {
         return images.size
     }
@@ -22,10 +26,5 @@ class ImageSliderAdapter(private var images: ArrayList<String>) : SliderViewAdap
     override fun onBindViewHolder(viewHolder: Holder?, position: Int) {
         val current = images[position]
         Glide.with(viewHolder!!.itemView).load(current).into(viewHolder.imageView)
-    }
-
-    class Holder(ItemView: View) : SliderViewAdapter.ViewHolder(ItemView) {
-        var imageView: ImageView = itemView.findViewById(R.id.image_view);
-
     }
 }
