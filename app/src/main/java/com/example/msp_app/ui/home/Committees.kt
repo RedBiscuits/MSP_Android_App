@@ -53,5 +53,5 @@ class Committees : Fragment(R.layout.fragment_committees){
 
         return binding.root
     }
-    
+
 }
