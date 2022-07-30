@@ -5,8 +5,10 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.cardview.widget.CardView
 import android.os.Bundle
 import android.widget.Toast
+import androidx.lifecycle.ViewModelProvider
 import com.example.msp_app.R
 import com.example.msp_app.databinding.ActivityHomeBinding
+import com.example.msp_app.ui.MSPViewModel
 
 class HomeActivity : AppCompatActivity() {
 
@@ -18,11 +20,17 @@ class HomeActivity : AppCompatActivity() {
     private val binding: ActivityHomeBinding by lazy {
         ActivityHomeBinding.inflate(layoutInflater)
     }
-
+    private val viewModel by lazy {
+        ViewModelProvider(this)[MSPViewModel::class.java]
+    }
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
         supportActionBar!!.hide()
+
+        viewModel.getTrends()
+        viewModel.getCommittees()
+        viewModel.getAnimations()
 
 
         binding.bottomNavigation.setOnNavigationItemSelectedListener() { item ->

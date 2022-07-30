@@ -2,6 +2,7 @@ package com.example.msp_app.ui
 
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
+import com.example.msp_app.R
 
 class MSPViewModel :ViewModel(){
 
@@ -36,5 +37,23 @@ class MSPViewModel :ViewModel(){
         arr.add(url)
         trendsMutableLiveData.value = arr
     }
+
+    val animationsMutableLiveData : MutableLiveData<ArrayList<Int>>by lazy {
+        MutableLiveData()
+    }
+    fun getAnimations(){
+        val arr:ArrayList<Int> = ArrayList()
+        val url = R.raw.settings_white
+        arr.add(url)
+        arr.add(url)
+        arr.add(url)
+        arr.add(url)
+        arr.add(url)
+        arr.add(url)
+        arr.add(url)
+        animationsMutableLiveData.value = arr
+    }
+
+
 
 }

@@ -5,11 +5,13 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
+import androidx.recyclerview.widget.DiffUtil
 import com.bumptech.glide.Glide
 import com.example.msp_app.R
 import com.smarteist.autoimageslider.SliderViewAdapter
 
-class ImageSliderAdapter(private var images: ArrayList<String>) : SliderViewAdapter<ImageSliderAdapter.Holder>() {
+class ImageSliderAdapter() : SliderViewAdapter<ImageSliderAdapter.Holder>() {
+    private lateinit var images: ArrayList<String>
     override fun getCount(): Int {
         return images.size
     }
@@ -26,6 +28,11 @@ class ImageSliderAdapter(private var images: ArrayList<String>) : SliderViewAdap
 
     class Holder(ItemView: View) : SliderViewAdapter.ViewHolder(ItemView) {
         var imageView: ImageView = itemView.findViewById(R.id.image_view);
-
     }
+
+    fun setData(arr:ArrayList<String>){
+        images = arr
+    }
+
+
 }

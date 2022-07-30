@@ -53,21 +53,22 @@
         app:layout_constraintTop_toBottomOf="@+id/imageSlider" />
 
 
-    <com.etsy.android.grid.StaggeredGridView
-        android:id="@+id/grid_view"
-        android:layout_width="0dp"
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/committee_animations_RV"
+        android:layout_width="match_parent"
         android:layout_height="0dp"
-        app:column_count="2"
-        app:item_margin="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView3" />
-<!--    <androidx.recyclerview.widget.RecyclerView-->
-<!--        android:id="@+id/communities_RV"-->
-<!--        android:layout_width="match_parent"-->
+        app:layout_constraintTop_toBottomOf="@+id/textView3"
+        />
+
+<!--    <com.etsy.android.grid.StaggeredGridView-->
+<!--        android:id="@+id/grid_view"-->
+<!--        android:layout_width="0dp"-->
 <!--        android:layout_height="0dp"-->
-<!--        android:paddingVertical="@dimen/_10sdp"-->
+<!--        app:column_count="2"-->
+<!--        app:item_margin="8dp"-->
 <!--        app:layout_constraintBottom_toBottomOf="parent"-->
 <!--        app:layout_constraintEnd_toEndOf="parent"-->
 <!--        app:layout_constraintStart_toStartOf="parent"-->
