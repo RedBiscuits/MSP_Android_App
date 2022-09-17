@@ -23,10 +23,8 @@ class CommiteesListAdapter : RecyclerView.Adapter<TrendingViewHolder>() {
 
     override fun onBindViewHolder(holder: TrendingViewHolder, position: Int) {
 
-        if(position ==1){
-//            holder.animation.setAnimation(LottieAnimationView.GONE)
-        }else{
-        holder.shapeableImageView.setImageResource(R.drawable.android)
+        if(position !=1) {
+            holder.shapeableImageView.setImageResource(R.drawable.android)
         }
     }
 
