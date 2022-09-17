@@ -3,6 +3,11 @@ package com.example.msp_app.ui
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.example.msp_app.R
+import com.example.msp_app.data.DataClient
+import com.example.msp_app.model.EventModel
+import retrofit2.Call
+import retrofit2.Callback
+import retrofit2.Response
 
 class MSPViewModel :ViewModel(){
 
@@ -52,6 +57,25 @@ class MSPViewModel :ViewModel(){
         arr.add(url)
         arr.add(url)
         animationsMutableLiveData.value = arr
+    }
+    val eventsMutableLiveData : MutableLiveData<ArrayList<EventModel>>by lazy {
+        MutableLiveData()
+    }
+    fun getEvents(){
+        DataClient.getDataInstance().events.enqueue(object :
+            Callback<ArrayList<EventModel>> {
+            override fun onResponse(call: Call<ArrayList<EventModel>>,
+                                    response: Response<ArrayList<EventModel>>
+            ) {
+                println("Respoooooooooooooooooonse " + response.body())
+                eventsMutableLiveData.value = response.body()
+            }
+
+            override fun onFailure(call: Call<ArrayList<EventModel>>, t: Throwable) {
+                println(t.toString())
+            }
+
+        })
     }
 
 
