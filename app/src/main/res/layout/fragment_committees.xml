@@ -6,7 +6,9 @@
     android:layout_height="match_parent"
     tools:context=".ui.home.Committees"
     android:backgroundTint="@color/secondary"
-    android:padding="@dimen/_16sdp"
+    android:paddingTop="@dimen/_16sdp"
+    android:paddingEnd="@dimen/_16sdp"
+    android:paddingStart="@dimen/_16sdp"
     android:background="@drawable/recshape"
     >
 
@@ -15,6 +17,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Trending"
+        android:layout_marginBottom="10dp"
         android:layout_marginStart="@dimen/_6sdp"
         android:textColor="@color/white"
         android:textSize="@dimen/_14ssp"

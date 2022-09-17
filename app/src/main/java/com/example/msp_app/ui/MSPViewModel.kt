@@ -19,7 +19,7 @@ class MSPViewModel :ViewModel(){
         arr.add(url)
         arr.add(url)
         arr.add(url)
-        committeesMutableLiveData.value = arr
+        committeesMutableLiveData.postValue(arr)
     }
 
     val trendsMutableLiveData : MutableLiveData<ArrayList<String>>by lazy {
@@ -31,11 +31,7 @@ class MSPViewModel :ViewModel(){
         arr.add(url)
         arr.add(url)
         arr.add(url)
-        arr.add(url)
-        arr.add(url)
-        arr.add(url)
-        arr.add(url)
-        trendsMutableLiveData.value = arr
+        trendsMutableLiveData.postValue(arr)
     }
 
     val animationsMutableLiveData : MutableLiveData<ArrayList<Int>>by lazy {
