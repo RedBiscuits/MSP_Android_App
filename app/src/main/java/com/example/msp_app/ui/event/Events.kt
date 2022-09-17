@@ -14,26 +14,26 @@ import com.smarteist.autoimageslider.SliderView
 
 class Events() : Fragment(R.layout.fragment_events) {
 
-//    override fun onCreateView(
-//        inflater: LayoutInflater, container: ViewGroup?,
-//        savedInstanceState: Bundle?
-//    ): View? {
-//        val viewModel: MSPViewModel by lazy {
-//            ViewModelProvider(this)[MSPViewModel::class.java]
-//        }
-//        viewModel.getEvents()
-//        var events = viewModel.eventsMutableLiveData.value
-//        val view = inflater.inflate(R.layout.fragment_events, container, false)
-//        val adapter = EventAdapter(events)
-//        val svEvents = view.findViewById<SliderView>(R.id.sv_events)
-//        svEvents.setSliderAdapter(adapter)
-//        viewModel.eventsMutableLiveData.observe(viewLifecycleOwner){
-//            events = it
-//            adapter.setData(events)
-//        }
-//        svEvents.setSliderTransformAnimation(SliderAnimations.DEPTHTRANSFORMATION)
-//        adapter.notifyDataSetChanged()
-//
-//        return view
-//    }
+    override fun onCreateView(
+        inflater: LayoutInflater, container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View? {
+        val viewModel: MSPViewModel by lazy {
+            ViewModelProvider(this)[MSPViewModel::class.java]
+        }
+        viewModel.getEvents()
+        var events = viewModel.eventsMutableLiveData.value
+        val view = inflater.inflate(R.layout.fragment_events, container, false)
+        val adapter = EventAdapter(events)
+        val svEvents = view.findViewById<SliderView>(R.id.sv_events)
+        svEvents.setSliderAdapter(adapter)
+        viewModel.eventsMutableLiveData.observe(viewLifecycleOwner){
+            events = it
+            adapter.setData(events)
+        }
+        svEvents.setSliderTransformAnimation(SliderAnimations.DEPTHTRANSFORMATION)
+        adapter.notifyDataSetChanged()
+
+        return view
+    }
 }
