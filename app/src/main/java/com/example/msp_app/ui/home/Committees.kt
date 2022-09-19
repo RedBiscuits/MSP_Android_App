@@ -38,7 +38,7 @@ class Committees : Fragment(R.layout.fragment_committees){
             sliderAdapter.notifyDataSetChanged()
         }
         binding.imageSlider.setSliderAdapter(sliderAdapter)
-        binding.imageSlider.setSliderTransformAnimation(SliderAnimations.DEPTHTRANSFORMATION)
+        binding.imageSlider.setSliderTransformAnimation(SliderAnimations.SIMPLETRANSFORMATION)
         binding.imageSlider.startAutoCycle()
 
         val animationsRecyclerView:RecyclerView = binding.committeeAnimationsRV

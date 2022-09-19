@@ -1,14 +1,14 @@
 package com.example.msp_app.ui.home
 
-import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
-import androidx.cardview.widget.CardView
 import android.os.Bundle
 import android.widget.Toast
+import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import com.example.msp_app.R
 import com.example.msp_app.databinding.ActivityHomeBinding
 import com.example.msp_app.ui.MSPViewModel
+import com.example.msp_app.ui.event.Events
 
 class HomeActivity : AppCompatActivity() {
 
@@ -36,19 +36,23 @@ class HomeActivity : AppCompatActivity() {
         binding.bottomNavigation.setOnNavigationItemSelectedListener() { item ->
             when(item.itemId) {
                 R.id.page_1 -> {
+                    Toast.makeText(this , "hello from 1" , Toast.LENGTH_LONG).show()
 
                     true
                 }
                 R.id.page_2 -> {
-                    loadMainFragment()
-                    Toast.makeText(this , "hello from 2" , Toast.LENGTH_LONG).show()
+                    transacteFramgent(Committees())
                     true
                 }
                 R.id.page_3 -> {
                     Toast.makeText(this , "hello from 3" , Toast.LENGTH_LONG).show()
                     true
                 }
+                R.id.page_4 -> {
+                    transacteFramgent(Events())
 
+                    true
+                }
                 else -> false
             }
         }
@@ -58,9 +62,9 @@ class HomeActivity : AppCompatActivity() {
 
     }
 
-    private fun loadMainFragment() {
+    private fun transacteFramgent(fragment : Fragment) {
         val transaction = supportFragmentManager.beginTransaction()
-        transaction.replace(R.id.fragment_container_view, Committees())
+        transaction.replace(R.id.fragment_container_view, fragment)
         transaction.addToBackStack(null)
         transaction.commit()
     }
