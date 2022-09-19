@@ -44,8 +44,7 @@ public class IntroActivity extends AppCompatActivity {
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
                 WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
-        //  check if its openened before or not
-
+        //  check if it  was opened before
         if (restorePrefData()) {
 
             Intent mainActivity = new Intent(getApplicationContext(), MainActivity.class );
@@ -84,27 +83,24 @@ public class IntroActivity extends AppCompatActivity {
 
         tabIndicator.setupWithViewPager(introScreenPager);
 
-        btnNext.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
+        btnNext.setOnClickListener(v -> {
 
-                position = introScreenPager.getCurrentItem();
-                if (position < mList.size()) {
+            position = introScreenPager.getCurrentItem();
+            if (position < mList.size()) {
 
-                    position++;
-                    introScreenPager.setCurrentItem(position);
-
-
-                }
-
-                if (position == mList.size()-1) {
-                    loaddLastScreen();
-
-                }
-
+                position++;
+                introScreenPager.setCurrentItem(position);
 
 
             }
+
+            if (position == mList.size()-1) {
+                loaddLastScreen();
+
+            }
+
+
+
         });
 
         tabIndicator.addOnTabSelectedListener(new TabLayout.BaseOnTabSelectedListener() {
@@ -135,31 +131,23 @@ public class IntroActivity extends AppCompatActivity {
 
         // Get Started button click listener
 
-        btnGetStarted.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
+        btnGetStarted.setOnClickListener(v -> {
 
 
-                //open main activity
+            //open main activity
 
-                Intent mainActivity = new Intent(getApplicationContext(), HomeActivity.class);
-                startActivity(mainActivity);
-                savePrefsData();
-                finish();
+            Intent mainActivity = new Intent(getApplicationContext(), HomeActivity.class);
+            startActivity(mainActivity);
+            savePrefsData();
+            finish();
 
 
 
-            }
         });
 
         // skip button click listener
 
-        tvSkip.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                introScreenPager.setCurrentItem(mList.size());
-            }
-        });
+        tvSkip.setOnClickListener(v -> introScreenPager.setCurrentItem(mList.size()));
 
 
 
